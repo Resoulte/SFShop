@@ -12,14 +12,6 @@
 
 @interface SFMyTableViewCell ()
 
-/**左边图片*/
-@property (strong, nonatomic)  UIImageView *leftImage;
-/**右边图片*/
-@property (strong, nonatomic) UIImageView *rightImage;
-/**左边文字*/
-@property (strong, nonatomic) UILabel *leftLable;
-/**分隔线*/
-@property (strong, nonatomic) UIView *lineView;
 
 
 @end
@@ -103,19 +95,19 @@
     return _lineView;
 }
 
-//- (void)setMessage:(SFMyMessage *)message {
-//
-//    self.message = message;
-//    
-//    self.leftImage.image = [UIImage imageNamed:message.image];
-//    self.leftLable.text = message.title;
-//    
-//    
-//}
+- (void)setMessage:(SFMyMessage *)message {
 
-- (void)setSourceDic:(NSDictionary *)sourceDic {
-
-    self.leftLable.text = sourceDic[@"title"];
-    self.leftImage.image = [UIImage imageNamed:sourceDic[@"image"]];
+    self.message = message;
+    
+    self.leftImage.image = [UIImage imageNamed:message.image];
+    self.leftLable.text = message.title;
+    
+    
 }
+
+//- (void)setSourceDic:(NSDictionary *)sourceDic {
+//
+//    self.leftLable.text = sourceDic[@"title"];
+//    self.leftImage.image = [UIImage imageNamed:sourceDic[@"image"]];
+//}
 @end

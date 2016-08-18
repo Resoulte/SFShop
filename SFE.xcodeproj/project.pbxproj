@@ -21,6 +21,10 @@
 		04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49E81D64AB2F004C2D7B /* SFMyTableViewCell.m */; };
 		04CA49ED1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CA49EC1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist */; };
 		04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */; };
+		04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7387F1D656308007B44A8 /* SFRegisterViewController.m */; };
+		04E738831D658A1C007B44A8 /* SFRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738821D658A1C007B44A8 /* SFRegisterView.m */; };
+		04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738881D65B8EB007B44A8 /* SFMyHeaderView.m */; };
+		04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7388B1D65BBE1007B44A8 /* SFMyTableView.m */; };
 		1B380EF8BBFFA8B371458106 /* libPods-SFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C360D450EA8ACE99010644 /* libPods-SFE.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,14 @@
 		04CA49EE1D64BC2E004C2D7B /* SFMyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyMessage.h; sourceTree = "<group>"; };
 		04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyMessage.m; sourceTree = "<group>"; };
 		04CA49F11D6541F4004C2D7B /* SFE.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFE.pch; sourceTree = "<group>"; };
+		04E7387E1D656308007B44A8 /* SFRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRegisterViewController.h; sourceTree = "<group>"; };
+		04E7387F1D656308007B44A8 /* SFRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRegisterViewController.m; sourceTree = "<group>"; };
+		04E738811D658A1C007B44A8 /* SFRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRegisterView.h; sourceTree = "<group>"; };
+		04E738821D658A1C007B44A8 /* SFRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRegisterView.m; sourceTree = "<group>"; };
+		04E738871D65B8EB007B44A8 /* SFMyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyHeaderView.h; sourceTree = "<group>"; };
+		04E738881D65B8EB007B44A8 /* SFMyHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyHeaderView.m; sourceTree = "<group>"; };
+		04E7388A1D65BBE1007B44A8 /* SFMyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyTableView.h; sourceTree = "<group>"; };
+		04E7388B1D65BBE1007B44A8 /* SFMyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyTableView.m; sourceTree = "<group>"; };
 		11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.debug.xcconfig"; sourceTree = "<group>"; };
 		15C360D450EA8ACE99010644 /* libPods-SFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +122,7 @@
 		04CA49B51D645907004C2D7B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04CA49F51D655AB5004C2D7B /* Register(注册) */,
 				04CA49B61D645907004C2D7B /* Buy(购物) */,
 				04CA49BC1D645907004C2D7B /* Class(分类) */,
 				04CA49C21D645907004C2D7B /* Main(主要) */,
@@ -255,6 +268,10 @@
 				04CA49EC1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist */,
 				04CA49E71D64AB2F004C2D7B /* SFMyTableViewCell.h */,
 				04CA49E81D64AB2F004C2D7B /* SFMyTableViewCell.m */,
+				04E738871D65B8EB007B44A8 /* SFMyHeaderView.h */,
+				04E738881D65B8EB007B44A8 /* SFMyHeaderView.m */,
+				04E7388A1D65BBE1007B44A8 /* SFMyTableView.h */,
+				04E7388B1D65BBE1007B44A8 /* SFMyTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +327,41 @@
 				04CA49E21D6486CE004C2D7B /* UIImage+SFImage.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		04CA49F51D655AB5004C2D7B /* Register(注册) */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49F61D655AB5004C2D7B /* Controller */,
+				04CA49F71D655AB5004C2D7B /* Model */,
+				04CA49F81D655AB5004C2D7B /* View */,
+			);
+			path = "Register(注册)";
+			sourceTree = "<group>";
+		};
+		04CA49F61D655AB5004C2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04E7387E1D656308007B44A8 /* SFRegisterViewController.h */,
+				04E7387F1D656308007B44A8 /* SFRegisterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CA49F71D655AB5004C2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA49F81D655AB5004C2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04E738811D658A1C007B44A8 /* SFRegisterView.h */,
+				04E738821D658A1C007B44A8 /* SFRegisterView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		24F10D12B1BCFA804FFE726C /* Frameworks */ = {
@@ -451,7 +503,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */,
 				04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */,
+				04E738831D658A1C007B44A8 /* SFRegisterView.m in Sources */,
 				04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
@@ -461,6 +515,8 @@
 				04CA49DA1D645907004C2D7B /* SFMyViewController.m in Sources */,
 				04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */,
 				04CA49E61D648B2F004C2D7B /* SFNavViewController.m in Sources */,
+				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
+				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

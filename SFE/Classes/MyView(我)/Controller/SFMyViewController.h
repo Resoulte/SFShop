@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+/**注册按钮的点击事件*/
+//typedef void(^registerBlock)();
+
+
 @interface SFMyViewController : UIViewController
+
+
+
+//@property (copy, nonatomic)  registerBlock registblock;
 
 @end

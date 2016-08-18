@@ -8,8 +8,10 @@
 
 
 #define SFColor(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
+#define SFMainColor [UIColor colorWithRed:(245 / 255.0) green:(245 / 255.0) blue:(245 / 255.0) alpha:1]
 
-
+#import <Masonry.h>
+#import <YYModel.h>
 
 #ifdef DEBUG  // 调试
 
