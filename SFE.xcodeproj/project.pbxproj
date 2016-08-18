@@ -8,24 +8,53 @@
 
 /* Begin PBXBuildFile section */
 		04CA49911D63FDA0004C2D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49901D63FDA0004C2D7B /* main.m */; };
-		04CA49941D63FDA1004C2D7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49931D63FDA1004C2D7B /* AppDelegate.m */; };
-		04CA49971D63FDA1004C2D7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49961D63FDA1004C2D7B /* ViewController.m */; };
-		04CA499A1D63FDA1004C2D7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA49981D63FDA1004C2D7B /* Main.storyboard */; };
 		04CA499C1D63FDA1004C2D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499B1D63FDA1004C2D7B /* Assets.xcassets */; };
 		04CA499F1D63FDA1004C2D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499D1D63FDA1004C2D7B /* LaunchScreen.storyboard */; };
+		04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49B91D645907004C2D7B /* SFBuyViewController.m */; };
+		04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49BF1D645907004C2D7B /* SFClassViewController.m */; };
+		04CA49DA1D645907004C2D7B /* SFMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49CB1D645907004C2D7B /* SFMyViewController.m */; };
+		04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49D01D645907004C2D7B /* AppDelegate.m */; };
+		04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49D41D645907004C2D7B /* SFTimeViewController.m */; };
+		04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49DE1D647F4B004C2D7B /* SFTabBarController.m */; };
+		04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49E21D6486CE004C2D7B /* UIImage+SFImage.m */; };
+		04CA49E61D648B2F004C2D7B /* SFNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49E51D648B2F004C2D7B /* SFNavViewController.m */; };
+		04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49E81D64AB2F004C2D7B /* SFMyTableViewCell.m */; };
+		04CA49ED1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CA49EC1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist */; };
+		04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */; };
+		1B380EF8BBFFA8B371458106 /* libPods-SFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C360D450EA8ACE99010644 /* libPods-SFE.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04CA498C1D63FDA0004C2D7B /* SFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA49901D63FDA0004C2D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04CA49921D63FDA1004C2D7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		04CA49931D63FDA1004C2D7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		04CA49951D63FDA1004C2D7B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04CA49961D63FDA1004C2D7B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04CA49991D63FDA1004C2D7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04CA499B1D63FDA1004C2D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CA499E1D63FDA1004C2D7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CA49A01D63FDA1004C2D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CA49B81D645907004C2D7B /* SFBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBuyViewController.h; sourceTree = "<group>"; };
+		04CA49B91D645907004C2D7B /* SFBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBuyViewController.m; sourceTree = "<group>"; };
+		04CA49BE1D645907004C2D7B /* SFClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFClassViewController.h; sourceTree = "<group>"; };
+		04CA49BF1D645907004C2D7B /* SFClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFClassViewController.m; sourceTree = "<group>"; };
+		04CA49CA1D645907004C2D7B /* SFMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyViewController.h; sourceTree = "<group>"; };
+		04CA49CB1D645907004C2D7B /* SFMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyViewController.m; sourceTree = "<group>"; };
+		04CA49CF1D645907004C2D7B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04CA49D01D645907004C2D7B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04CA49D31D645907004C2D7B /* SFTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTimeViewController.h; sourceTree = "<group>"; };
+		04CA49D41D645907004C2D7B /* SFTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTimeViewController.m; sourceTree = "<group>"; };
+		04CA49DD1D647F4B004C2D7B /* SFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTabBarController.h; sourceTree = "<group>"; };
+		04CA49DE1D647F4B004C2D7B /* SFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTabBarController.m; sourceTree = "<group>"; };
+		04CA49E11D6486CE004C2D7B /* UIImage+SFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SFImage.h"; sourceTree = "<group>"; };
+		04CA49E21D6486CE004C2D7B /* UIImage+SFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SFImage.m"; sourceTree = "<group>"; };
+		04CA49E41D648B2F004C2D7B /* SFNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFNavViewController.h; sourceTree = "<group>"; };
+		04CA49E51D648B2F004C2D7B /* SFNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNavViewController.m; sourceTree = "<group>"; };
+		04CA49E71D64AB2F004C2D7B /* SFMyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyTableViewCell.h; sourceTree = "<group>"; };
+		04CA49E81D64AB2F004C2D7B /* SFMyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyTableViewCell.m; sourceTree = "<group>"; };
+		04CA49EC1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFMyMessageTablePlist.plist; sourceTree = "<group>"; };
+		04CA49EE1D64BC2E004C2D7B /* SFMyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyMessage.h; sourceTree = "<group>"; };
+		04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyMessage.m; sourceTree = "<group>"; };
+		04CA49F11D6541F4004C2D7B /* SFE.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFE.pch; sourceTree = "<group>"; };
+		11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.debug.xcconfig"; sourceTree = "<group>"; };
+		15C360D450EA8ACE99010644 /* libPods-SFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B380EF8BBFFA8B371458106 /* libPods-SFE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +74,8 @@
 			children = (
 				04CA498E1D63FDA0004C2D7B /* SFE */,
 				04CA498D1D63FDA0004C2D7B /* Products */,
+				A3C6971BA9106236444115B9 /* Pods */,
+				24F10D12B1BCFA804FFE726C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +90,7 @@
 		04CA498E1D63FDA0004C2D7B /* SFE */ = {
 			isa = PBXGroup;
 			children = (
-				04CA49921D63FDA1004C2D7B /* AppDelegate.h */,
-				04CA49931D63FDA1004C2D7B /* AppDelegate.m */,
-				04CA49951D63FDA1004C2D7B /* ViewController.h */,
-				04CA49961D63FDA1004C2D7B /* ViewController.m */,
-				04CA49981D63FDA1004C2D7B /* Main.storyboard */,
+				04CA49B51D645907004C2D7B /* Classes */,
 				04CA499B1D63FDA1004C2D7B /* Assets.xcassets */,
 				04CA499D1D63FDA1004C2D7B /* LaunchScreen.storyboard */,
 				04CA49A01D63FDA1004C2D7B /* Info.plist */,
@@ -79,6 +107,228 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04CA49B51D645907004C2D7B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49B61D645907004C2D7B /* Buy(购物) */,
+				04CA49BC1D645907004C2D7B /* Class(分类) */,
+				04CA49C21D645907004C2D7B /* Main(主要) */,
+				04CA49C81D645907004C2D7B /* MyView(我) */,
+				04CA49CE1D645907004C2D7B /* Other */,
+				04CA49D11D645907004C2D7B /* Time(限时特卖) */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04CA49B61D645907004C2D7B /* Buy(购物) */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49B71D645907004C2D7B /* Controller */,
+				04CA49BA1D645907004C2D7B /* Model */,
+				04CA49BB1D645907004C2D7B /* View */,
+			);
+			path = "Buy(购物)";
+			sourceTree = "<group>";
+		};
+		04CA49B71D645907004C2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49B81D645907004C2D7B /* SFBuyViewController.h */,
+				04CA49B91D645907004C2D7B /* SFBuyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CA49BA1D645907004C2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA49BB1D645907004C2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CA49BC1D645907004C2D7B /* Class(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49BD1D645907004C2D7B /* Controller */,
+				04CA49C01D645907004C2D7B /* Model */,
+				04CA49C11D645907004C2D7B /* View */,
+			);
+			path = "Class(分类)";
+			sourceTree = "<group>";
+		};
+		04CA49BD1D645907004C2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49BE1D645907004C2D7B /* SFClassViewController.h */,
+				04CA49BF1D645907004C2D7B /* SFClassViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CA49C01D645907004C2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA49C11D645907004C2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CA49C21D645907004C2D7B /* Main(主要) */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49C31D645907004C2D7B /* Controller */,
+				04CA49C61D645907004C2D7B /* Model */,
+				04CA49C71D645907004C2D7B /* View */,
+			);
+			path = "Main(主要)";
+			sourceTree = "<group>";
+		};
+		04CA49C31D645907004C2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49DD1D647F4B004C2D7B /* SFTabBarController.h */,
+				04CA49DE1D647F4B004C2D7B /* SFTabBarController.m */,
+				04CA49E41D648B2F004C2D7B /* SFNavViewController.h */,
+				04CA49E51D648B2F004C2D7B /* SFNavViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CA49C61D645907004C2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA49C71D645907004C2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CA49C81D645907004C2D7B /* MyView(我) */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49C91D645907004C2D7B /* Controller */,
+				04CA49CC1D645907004C2D7B /* Model */,
+				04CA49CD1D645907004C2D7B /* View */,
+			);
+			path = "MyView(我)";
+			sourceTree = "<group>";
+		};
+		04CA49C91D645907004C2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49CA1D645907004C2D7B /* SFMyViewController.h */,
+				04CA49CB1D645907004C2D7B /* SFMyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CA49CC1D645907004C2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49EE1D64BC2E004C2D7B /* SFMyMessage.h */,
+				04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA49CD1D645907004C2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49EC1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist */,
+				04CA49E71D64AB2F004C2D7B /* SFMyTableViewCell.h */,
+				04CA49E81D64AB2F004C2D7B /* SFMyTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CA49CE1D645907004C2D7B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49E01D648696004C2D7B /* Category */,
+				04CA49CF1D645907004C2D7B /* AppDelegate.h */,
+				04CA49D01D645907004C2D7B /* AppDelegate.m */,
+				04CA49F11D6541F4004C2D7B /* SFE.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		04CA49D11D645907004C2D7B /* Time(限时特卖) */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49D21D645907004C2D7B /* Controller */,
+				04CA49D51D645907004C2D7B /* Model */,
+				04CA49D61D645907004C2D7B /* View */,
+			);
+			path = "Time(限时特卖)";
+			sourceTree = "<group>";
+		};
+		04CA49D21D645907004C2D7B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49D31D645907004C2D7B /* SFTimeViewController.h */,
+				04CA49D41D645907004C2D7B /* SFTimeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04CA49D51D645907004C2D7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04CA49D61D645907004C2D7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04CA49E01D648696004C2D7B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				04CA49E11D6486CE004C2D7B /* UIImage+SFImage.h */,
+				04CA49E21D6486CE004C2D7B /* UIImage+SFImage.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		24F10D12B1BCFA804FFE726C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C360D450EA8ACE99010644 /* libPods-SFE.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3C6971BA9106236444115B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */,
+				B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +336,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CA49A31D63FDA1004C2D7B /* Build configuration list for PBXNativeTarget "SFE" */;
 			buildPhases = (
+				A832F308600EDDA2FF13716D /* [CP] Check Pods Manifest.lock */,
 				04CA49881D63FDA0004C2D7B /* Sources */,
 				04CA49891D63FDA0004C2D7B /* Frameworks */,
 				04CA498A1D63FDA0004C2D7B /* Resources */,
+				4BDAC6E89B579187776EDAD4 /* [CP] Embed Pods Frameworks */,
+				2965E599FD8739873DA2597B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -105,6 +358,7 @@
 		04CA49841D63FDA0004C2D7B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SF;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = shifei;
 				TargetAttributes = {
@@ -138,34 +392,82 @@
 			files = (
 				04CA499F1D63FDA1004C2D7B /* LaunchScreen.storyboard in Resources */,
 				04CA499C1D63FDA1004C2D7B /* Assets.xcassets in Resources */,
-				04CA499A1D63FDA1004C2D7B /* Main.storyboard in Resources */,
+				04CA49ED1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2965E599FD8739873DA2597B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SFE/Pods-SFE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BDAC6E89B579187776EDAD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SFE/Pods-SFE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A832F308600EDDA2FF13716D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04CA49881D63FDA0004C2D7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CA49971D63FDA1004C2D7B /* ViewController.m in Sources */,
-				04CA49941D63FDA1004C2D7B /* AppDelegate.m in Sources */,
+				04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */,
+				04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */,
+				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
+				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
+				04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */,
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
+				04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */,
+				04CA49DA1D645907004C2D7B /* SFMyViewController.m in Sources */,
+				04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */,
+				04CA49E61D648B2F004C2D7B /* SFNavViewController.m in Sources */,
+				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04CA49981D63FDA1004C2D7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04CA49991D63FDA1004C2D7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04CA499D1D63FDA1004C2D7B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,9 +563,12 @@
 		};
 		04CA49A41D63FDA1004C2D7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SFE/Classes/Other/SFE.pch;
 				INFOPLIST_FILE = SFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,9 +579,12 @@
 		};
 		04CA49A51D63FDA1004C2D7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SFE/Classes/Other/SFE.pch;
 				INFOPLIST_FILE = SFE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -304,6 +612,7 @@
 				04CA49A51D63FDA1004C2D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
