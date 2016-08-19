@@ -7,6 +7,7 @@
 //
 
 #import "SFMyViewController.h"
+#import "SFRegisterViewController.h"
 #import "SFMyTableView.h"
 #import "SFMyHeaderView.h"
 
@@ -60,6 +61,12 @@
 
     if (!_headerView) {
         _headerView = [[SFMyHeaderView alloc] init];
+        
+        __weak typeof(self) weakSelf = self;
+        _headerView.registerBlock = ^(){
+            SFRegisterViewController *registe = [[SFRegisterViewController alloc] init];
+            [weakSelf.navigationController pushViewController:registe animated:YES];
+        };
     }
     return _headerView;
 }

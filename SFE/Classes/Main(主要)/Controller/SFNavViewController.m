@@ -33,5 +33,19 @@
     
 }
 
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    if (self.viewControllers.count != 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriRenderImage:@"详情界面返回按钮"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+    }
+    
+    
+    [super pushViewController:viewController animated:animated];
+}
 
+- (void)back {
+
+    [self popViewControllerAnimated:YES];
+}
 @end

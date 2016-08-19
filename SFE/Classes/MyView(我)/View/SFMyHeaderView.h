@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^registerBlock)();
+
 @interface SFMyHeaderView : UIView
 
+/**注册block*/
+@property (copy, nonatomic) registerBlock registerBlock;
 @end

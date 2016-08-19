@@ -37,7 +37,7 @@
 - (void)layoutSubviews {
     
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.edges.equalTo(self).with.insets(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -83,11 +83,18 @@
         [_registerBtn setTitle:@"注册" forState:UIControlStateNormal];
         _registerBtn.tintColor = [UIColor whiteColor];
         _registerBtn.titleLabel.font = [UIFont systemFontOfSize:18.0f];
-        
+        [_registerBtn addTarget:self action:@selector(registerAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _registerBtn;
 }
 
+- (void)registerAction {
+
+    if (_registerBlock) {
+        _registerBlock();
+    }
+
+}
 
 
 @end
