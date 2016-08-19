@@ -40,6 +40,7 @@
         [self addSubview:self.lineLable];
         [self addSubview:self.registeBtn];
         [self addSubview:self.repeatBtn];
+        [self GCDTime];
     }
     return self;
 }
@@ -66,7 +67,7 @@
         make.top.bottom.equalTo(weakSelf.backView);
         
     }];
-    
+
     [self.timeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 44));
         make.top.right.equalTo(weakSelf.backView);
@@ -86,12 +87,11 @@
         make.right.offset(-15);
         make.top.equalTo(weakSelf.backView.mas_bottom).offset(15);
     }];
-    
+
     [self.repeatBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(130, 18));
         make.top.equalTo(weakSelf.registeBtn.mas_bottom).offset(22);
-        make.size.mas_equalTo(CGSizeMake(18, 110));
-        make.left.offset(16);
-        make.right.offset(-16);
+        make.centerX.equalTo(weakSelf.mas_centerX);
         
     }];
 }
@@ -101,9 +101,8 @@
 
     if (!_tostLable) {
         _tostLable = [[UILabel alloc] init];
-        _tostLable.text = @"验证码已发送到+86";
         _tostLable.font = [UIFont systemFontOfSize:14];
-        _tostLable.textColor = SFColor(82, 82, 82);
+        _tostLable.attributedText = [self makeAtributesTostLable];
     }
     return _tostLable;
 }
@@ -126,8 +125,20 @@
         _codeTextFiled.placeholder = @"请输入验证码";
         _codeTextFiled.textColor = SFColor(201, 201, 201);
         _codeTextFiled.font = [UIFont systemFontOfSize:14];
+        [_codeTextFiled addTarget:self action:@selector(changValue:) forControlEvents:UIControlEventAllEditingEvents];
     }
     return _codeTextFiled;
+}
+
+- (void)changValue:(UITextField *)textFiled {
+    
+    if (textFiled.text.length == 6) {
+        _registeBtn.userInteractionEnabled = YES;
+        _registeBtn.backgroundColor = SFColor(0, 183, 239);
+    } else {
+        _registeBtn.userInteractionEnabled = NO;
+        _registeBtn.backgroundColor = SFColor(234, 234, 234);
+    }
 }
 
 - (UILabel *)lineLable {
@@ -143,9 +154,9 @@
 
     if (!_timeBtn) {
         _timeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_timeBtn setTitle:@"60秒后重试" forState:UIControlStateNormal];
         [_timeBtn setTitleColor:SFColor(150, 150, 150) forState:UIControlStateNormal];
-        
+//        [_timeBtn setTitle:@"60秒后重试" forState:UIControlStateNormal];
+        [_timeBtn addTarget:self action:@selector(GCDTime) forControlEvents:UIControlEventTouchUpInside];
     }
     return _timeBtn;
 }
@@ -168,8 +179,66 @@
         [_repeatBtn setTitle:@"重新发送验证码" forState:UIControlStateNormal];
         _repeatBtn.titleLabel.font = [UIFont systemFontOfSize:18];
         [_repeatBtn setTitleColor:SFColor(210, 210, 210) forState:UIControlStateNormal];
+        [_repeatBtn addTarget:self action:@selector(GCDTime) forControlEvents:UIControlEventTouchUpInside];
     }
     return _repeatBtn;
+}
+
+#pragma mark - tostLable富文本
+- (NSMutableAttributedString *)makeAtributesTostLable {
+    
+    NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"验证码已发送到" attributes:@{NSForegroundColorAttributeName : SFColor(150, 150, 150)}];
+    
+    NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"+86" attributes:@{NSForegroundColorAttributeName : SFColor(0, 189, 240)}];
+    
+    [string1 insertAttributedString:string2 atIndex:string1.length];
+    
+    return string1;
+}
+
+#pragma mark - timeBtn富文本
+- (NSMutableAttributedString *)makeAttributesTimeButton:(NSInteger)time {
+
+    NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%zd", time] attributes:@{NSForegroundColorAttributeName : SFColor(0, 189, 240)}];
+    
+    NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"秒后重试" attributes:@{NSForegroundColorAttributeName : SFColor(149, 149, 149)}];
+    
+    [string insertAttributedString:string1 atIndex:string.length];
+    
+    return string;
+}
+
+- (void)GCDTime {
+    
+    __block NSInteger time = 5;
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 1.0 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(timer, ^{
+       
+        if (time < 1) {
+            
+            dispatch_source_cancel(timer);
+            NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithString:@"重新发送" attributes:@{NSForegroundColorAttributeName : SFColor(0, 189, 240)}];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _timeBtn.userInteractionEnabled = YES;
+                _repeatBtn.userInteractionEnabled = YES;
+                [_repeatBtn setTitleColor:SFColor(0, 189, 240) forState:UIControlStateNormal];
+                [_timeBtn setAttributedTitle:string forState:UIControlStateNormal];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _timeBtn.userInteractionEnabled = NO;
+                _repeatBtn.userInteractionEnabled = NO;
+                [_timeBtn setAttributedTitle:[self makeAttributesTimeButton:time] forState:UIControlStateNormal];
+            });
+        
+            time --;
+        }
+    });
+    dispatch_resume(timer);
 }
 
 @end

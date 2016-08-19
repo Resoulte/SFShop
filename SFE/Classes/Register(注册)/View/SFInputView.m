@@ -206,7 +206,7 @@
             _nextBtn.userInteractionEnabled = NO;
             _nextBtn.backgroundColor = SFColor(234, 234, 234);
         }
-        SFLog(@"phone%@", textFiled.text);
+//        SFLog(@"phone%@", textFiled.text);
 }
 
 #pragma mark - pwdChange的监听方法
@@ -220,7 +220,7 @@
         _nextBtn.userInteractionEnabled = NO;
         _nextBtn.backgroundColor = SFColor(234, 234, 234);
     }
-    SFLog(@"pwd%@", textFiled.text);
+//    SFLog(@"pwd%@", textFiled.text);
 }
 
 #pragma mark - 跳转到下一步

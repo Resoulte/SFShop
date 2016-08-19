@@ -66,6 +66,7 @@
         _headerView.registerBlock = ^(){
             SFRegisterViewController *registe = [[SFRegisterViewController alloc] init];
             [weakSelf.navigationController pushViewController:registe animated:YES];
+
         };
     }
     return _headerView;
