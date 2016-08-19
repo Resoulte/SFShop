@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^nextButttonBlock)();
+typedef void(^nextButttonBlock)(NSDictionary *dict);
 
 @interface SFInputView : UIView
 

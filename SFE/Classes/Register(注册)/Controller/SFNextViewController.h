@@ -10,4 +10,7 @@
 
 @interface SFNextViewController : UIViewController
 
+/**储存用户账号和密码的字典*/
+@property (strong, nonatomic) NSDictionary *userMessageDict;
+
 @end

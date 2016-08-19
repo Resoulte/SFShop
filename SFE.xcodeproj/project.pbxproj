@@ -28,6 +28,7 @@
 		04E738921D65EC2E007B44A8 /* SFThirdLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738911D65EC2E007B44A8 /* SFThirdLoginView.m */; };
 		04E738951D66A045007B44A8 /* SFNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738941D66A045007B44A8 /* SFNextView.m */; };
 		04E738981D66A34E007B44A8 /* SFNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738971D66A34E007B44A8 /* SFNextViewController.m */; };
+		04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7389C1D6750AD007B44A8 /* SFHttpTools.m */; };
 		1B380EF8BBFFA8B371458106 /* libPods-SFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C360D450EA8ACE99010644 /* libPods-SFE.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		04E738941D66A045007B44A8 /* SFNextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNextView.m; sourceTree = "<group>"; };
 		04E738961D66A34E007B44A8 /* SFNextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFNextViewController.h; sourceTree = "<group>"; };
 		04E738971D66A34E007B44A8 /* SFNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNextViewController.m; sourceTree = "<group>"; };
+		04E7389B1D6750AD007B44A8 /* SFHttpTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHttpTools.h; sourceTree = "<group>"; };
+		04E7389C1D6750AD007B44A8 /* SFHttpTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHttpTools.m; sourceTree = "<group>"; };
 		11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.debug.xcconfig"; sourceTree = "<group>"; };
 		15C360D450EA8ACE99010644 /* libPods-SFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +291,7 @@
 		04CA49CE1D645907004C2D7B /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				04E738991D6750AD007B44A8 /* Tools */,
 				04CA49E01D648696004C2D7B /* Category */,
 				04CA49CF1D645907004C2D7B /* AppDelegate.h */,
 				04CA49D01D645907004C2D7B /* AppDelegate.m */,
@@ -377,6 +381,23 @@
 				04E738941D66A045007B44A8 /* SFNextView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04E738991D6750AD007B44A8 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				04E7389A1D6750AD007B44A8 /* SecondAFNetworking */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		04E7389A1D6750AD007B44A8 /* SecondAFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				04E7389B1D6750AD007B44A8 /* SFHttpTools.h */,
+				04E7389C1D6750AD007B44A8 /* SFHttpTools.m */,
+			);
+			path = SecondAFNetworking;
 			sourceTree = "<group>";
 		};
 		24F10D12B1BCFA804FFE726C /* Frameworks */ = {
@@ -533,6 +554,7 @@
 				04E738981D66A34E007B44A8 /* SFNextViewController.m in Sources */,
 				04CA49E61D648B2F004C2D7B /* SFNavViewController.m in Sources */,
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
+				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
 				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,

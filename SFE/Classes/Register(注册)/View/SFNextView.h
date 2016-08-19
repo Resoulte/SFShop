@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SFNextView : UIView
-
+/**记录手机号*/
+@property (copy, nonatomic) NSString *phoneNumber;
 @end

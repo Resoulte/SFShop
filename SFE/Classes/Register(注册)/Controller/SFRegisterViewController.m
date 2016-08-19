@@ -67,9 +67,10 @@
 //        _inputView.backgroundColor = [UIColor redColor];
         
         __weak typeof(self) weakSelf = self;
-        _inputView.nextButttonBlock = ^() {
+        _inputView.nextButttonBlock = ^(NSDictionary *dict) {
             
             SFNextViewController *next = [[SFNextViewController alloc] init];
+            next.userMessageDict = dict;
             [weakSelf.navigationController pushViewController:next animated:YES];
             
             

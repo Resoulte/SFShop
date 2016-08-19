@@ -103,6 +103,7 @@
         _tostLable = [[UILabel alloc] init];
         _tostLable.font = [UIFont systemFontOfSize:14];
         _tostLable.attributedText = [self makeAtributesTostLable];
+//        _tostLable.text = @"验证码已发送到 +86";
     }
     return _tostLable;
 }
@@ -184,12 +185,18 @@
     return _repeatBtn;
 }
 
+- (void)setPhoneNumber:(NSString *)phoneNumber {
+
+    _phoneNumber = phoneNumber;
+    _tostLable.attributedText = [self makeAtributesTostLable];
+}
+
 #pragma mark - tostLable富文本
 - (NSMutableAttributedString *)makeAtributesTostLable {
     
     NSMutableAttributedString *string1 = [[NSMutableAttributedString alloc] initWithString:@"验证码已发送到" attributes:@{NSForegroundColorAttributeName : SFColor(150, 150, 150)}];
     
-    NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:@"+86" attributes:@{NSForegroundColorAttributeName : SFColor(0, 189, 240)}];
+    NSMutableAttributedString *string2 = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@" +86%@", _phoneNumber] attributes:@{NSForegroundColorAttributeName : SFColor(0, 189, 240)}];
     
     [string1 insertAttributedString:string2 atIndex:string1.length];
     

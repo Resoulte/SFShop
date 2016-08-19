@@ -15,6 +15,8 @@
 #import <Masonry.h>
 #import <YYModel.h>
 #import "UIImage+SFImage.h"
+#import "SFHttpTools.h"
+
 
 #ifdef DEBUG  // 调试
 

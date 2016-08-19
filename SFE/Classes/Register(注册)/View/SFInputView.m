@@ -228,7 +228,7 @@
     
     if (_nextButttonBlock) {
     
-        _nextButttonBlock();
+        _nextButttonBlock(@{@"userName" : _phoneFiled.text, @"password" : _pwdFiled.text});
     }
 }
 @end
