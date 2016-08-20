@@ -8,7 +8,7 @@
 
 #import "SFNextView.h"
 
-@interface SFNextView ()
+@interface SFNextView () <UITextFieldDelegate>
 
 /**接收电话号码的lable*/
 @property (strong, nonatomic) UILabel *tostLable;
@@ -40,7 +40,7 @@
         [self addSubview:self.lineLable];
         [self addSubview:self.registeBtn];
         [self addSubview:self.repeatBtn];
-        [self GCDTime];
+//        [self GCDTime];
     }
     return self;
 }
@@ -126,6 +126,7 @@
         _codeTextFiled.placeholder = @"请输入验证码";
         _codeTextFiled.textColor = SFColor(201, 201, 201);
         _codeTextFiled.font = [UIFont systemFontOfSize:14];
+        _codeTextFiled.delegate = self;
         [_codeTextFiled addTarget:self action:@selector(changValue:) forControlEvents:UIControlEventAllEditingEvents];
     }
     return _codeTextFiled;
@@ -157,7 +158,7 @@
         _timeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_timeBtn setTitleColor:SFColor(150, 150, 150) forState:UIControlStateNormal];
 //        [_timeBtn setTitle:@"60秒后重试" forState:UIControlStateNormal];
-        [_timeBtn addTarget:self action:@selector(GCDTime) forControlEvents:UIControlEventTouchUpInside];
+        [_timeBtn addTarget:self action:@selector(repeatTimeBtnRequest) forControlEvents:UIControlEventTouchUpInside];
     }
     return _timeBtn;
 }
@@ -169,6 +170,7 @@
         [_registeBtn setTitleColor:SFColor(149, 149, 149) forState:UIControlStateNormal];
         [_registeBtn setTitle:@"注册" forState:UIControlStateNormal];
         _registeBtn.backgroundColor = SFColor(234, 234, 234);
+        [_registeBtn addTarget:self action:@selector(registeBtnRequest) forControlEvents:UIControlEventTouchUpInside];
     }
     return _registeBtn;
 }
@@ -180,7 +182,7 @@
         [_repeatBtn setTitle:@"重新发送验证码" forState:UIControlStateNormal];
         _repeatBtn.titleLabel.font = [UIFont systemFontOfSize:18];
         [_repeatBtn setTitleColor:SFColor(210, 210, 210) forState:UIControlStateNormal];
-        [_repeatBtn addTarget:self action:@selector(GCDTime) forControlEvents:UIControlEventTouchUpInside];
+        [_repeatBtn addTarget:self action:@selector(repeatTimeBtnRequest) forControlEvents:UIControlEventTouchUpInside];
     }
     return _repeatBtn;
 }
@@ -189,6 +191,31 @@
 
     _phoneNumber = phoneNumber;
     _tostLable.attributedText = [self makeAtributesTostLable];
+}
+
+// 重新获得验证码
+- (void)repeatTimeBtnRequest {
+    
+    if (_repeatTimeBtnBlock) {
+        _repeatTimeBtnBlock();
+    }
+}
+
+// 注册按钮点击调用方法
+- (void)registeBtnRequest {
+    if (_repeatTimeBtnBlock) {
+        _repeatTimeBtnBlock(_codeTextFiled.text);
+    }
+    
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+
+    if (textField == _codeTextFiled && range.location == 6 ) {
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - tostLable富文本

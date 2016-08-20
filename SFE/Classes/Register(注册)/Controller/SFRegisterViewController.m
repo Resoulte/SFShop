@@ -12,6 +12,7 @@
 #import "SFThirdLoginView.h"
 
 
+
 @interface SFRegisterViewController ()
 
 /**注册输入view*/
@@ -34,8 +35,8 @@
     self.edgesForExtendedLayout = 0;
     
     [self setupAllChildView];
-
-}
+    
+   }
 
 - (void)setupAllChildView {
     

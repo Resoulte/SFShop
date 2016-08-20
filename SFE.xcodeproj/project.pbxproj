@@ -29,6 +29,8 @@
 		04E738951D66A045007B44A8 /* SFNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738941D66A045007B44A8 /* SFNextView.m */; };
 		04E738981D66A34E007B44A8 /* SFNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738971D66A34E007B44A8 /* SFNextViewController.m */; };
 		04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7389C1D6750AD007B44A8 /* SFHttpTools.m */; };
+		04E738A11D675E95007B44A8 /* UIImageView+SFSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738A01D675E95007B44A8 /* UIImageView+SFSDWebImage.m */; };
+		04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738A41D68026C007B44A8 /* UIView+Toast.m */; };
 		1B380EF8BBFFA8B371458106 /* libPods-SFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C360D450EA8ACE99010644 /* libPods-SFE.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,10 @@
 		04E738971D66A34E007B44A8 /* SFNextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNextViewController.m; sourceTree = "<group>"; };
 		04E7389B1D6750AD007B44A8 /* SFHttpTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHttpTools.h; sourceTree = "<group>"; };
 		04E7389C1D6750AD007B44A8 /* SFHttpTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHttpTools.m; sourceTree = "<group>"; };
+		04E7389F1D675E95007B44A8 /* UIImageView+SFSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SFSDWebImage.h"; sourceTree = "<group>"; };
+		04E738A01D675E95007B44A8 /* UIImageView+SFSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SFSDWebImage.m"; sourceTree = "<group>"; };
+		04E738A31D68026C007B44A8 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		04E738A41D68026C007B44A8 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.debug.xcconfig"; sourceTree = "<group>"; };
 		15C360D450EA8ACE99010644 /* libPods-SFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.release.xcconfig"; sourceTree = "<group>"; };
@@ -386,6 +392,8 @@
 		04E738991D6750AD007B44A8 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				04E738A21D68026C007B44A8 /* Toast */,
+				04E7389E1D675E95007B44A8 /* SFSDWebImage */,
 				04E7389A1D6750AD007B44A8 /* SecondAFNetworking */,
 			);
 			path = Tools;
@@ -398,6 +406,24 @@
 				04E7389C1D6750AD007B44A8 /* SFHttpTools.m */,
 			);
 			path = SecondAFNetworking;
+			sourceTree = "<group>";
+		};
+		04E7389E1D675E95007B44A8 /* SFSDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				04E7389F1D675E95007B44A8 /* UIImageView+SFSDWebImage.h */,
+				04E738A01D675E95007B44A8 /* UIImageView+SFSDWebImage.m */,
+			);
+			path = SFSDWebImage;
+			sourceTree = "<group>";
+		};
+		04E738A21D68026C007B44A8 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				04E738A31D68026C007B44A8 /* UIView+Toast.h */,
+				04E738A41D68026C007B44A8 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		24F10D12B1BCFA804FFE726C /* Frameworks */ = {
@@ -544,6 +570,7 @@
 				04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
+				04E738A11D675E95007B44A8 /* UIImageView+SFSDWebImage.m in Sources */,
 				04E738921D65EC2E007B44A8 /* SFThirdLoginView.m in Sources */,
 				04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */,
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
@@ -556,6 +583,7 @@
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
 				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
+				04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */,
 				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
 			);
