@@ -10,7 +10,6 @@
 
 #import "SFNextViewController.h"
 #import "SFNextView.h"
-#import <AFNetworking.h>
 
 @interface SFNextViewController ()
 
@@ -33,7 +32,7 @@
     
     SFLog(@"用户名和密码：%@", _userMessageDict);
     
-//    [self codeRequestHttp];
+    [self codeRequestHttp];
 }
 // 验证码网络请求
 - (void)codeRequestHttp {
@@ -44,21 +43,19 @@
     //    成功标识:result
     //
     // 发出网络请求
-    NSDictionary *params = @{
-                             @"MemberId" : _userMessageDict[@"userName"]
-                             };
+    NSDictionary *params = @{@"MemberId" : _userMessageDict[@"userName"]};
     
-    [SFHttpTools postWithPath:@"appMember/createCode.do" params:params success:^(id json) {
+    [self postWithPath:@"appMember/createCode.do" params:params success:^(id json) {
         SFLog(@"%@", json);
-        //        if ([json[@"result"] isEqualToString:@"success"]) {
-                    [self.nextView GCDTime];
-        //        } if ([json[@"result"] isEqualToString:@"TelephoneExistError"]) {
-        //            NSLog(@"电话号码已被注册");
-        //        } else {
-        //            SFLog(@"手机号错误");
-        //        }
+        if ([json[@"result"] isEqualToString:@"success"]) {
+            [self.nextView GCDTime];
+        } else if ([json[@"result"] isEqualToString:@"TelephoneExistError"]){
+            [self showTostInView:@"手机号已注册"];
+        } else {
+            [self showTostInView:@"手机号错误"];
+        }
     } failure:^(NSError *error) {
-        SFLog(@"%@", error);
+        
     }];
 
 }
@@ -82,11 +79,19 @@
                              @"Code" : codeString,
                              @"Telephone" : _userMessageDict[@"userName"]
                              };
-    [SFHttpTools getWithPath:@"appMember/appRegistration.do" params:params success:^(id json) {
-        SFLog(@"%@", json);
+    [self getWithPath:@"appMember/appRegistration.do" params:params success:^(id json) {
+        if ([json[@"result"] isEqualToString:@"success"]) {
+            [self showTostInView:@"注册成功"];
+            [self performSelector:@selector(returnMyview) withObject:nil afterDelay:1.0];
+        }else if([json[@"result"] isEqualToString:@"codeError"]){
+            [self showTostInView:@"验证码错误"];
+        }else{
+            [self showTostInView:@"注册失败"];
+        }
     } failure:^(NSError *error) {
-        SFLog(@"%@", error);
+        [self showTostInView:@"请检查网络"];
     }];
+    
 }
 
 
@@ -116,5 +121,10 @@
         };
     }
     return _nextView;
+}
+
+- (void)returnMyview {
+
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

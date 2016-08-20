@@ -16,7 +16,7 @@
 #import <YYModel.h>
 #import "UIImage+SFImage.h"
 #import "SFHttpTools.h"
-#import <SVProgressHUD.h>
+
 
 
 #ifdef DEBUG  // 调试

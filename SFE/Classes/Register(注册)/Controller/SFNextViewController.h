@@ -6,9 +6,9 @@
 //  Copyright © 2016年 shifei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SFBaseViewController.h"
 
-@interface SFNextViewController : UIViewController
+@interface SFNextViewController : SFBaseViewController
 
 /**储存用户账号和密码的字典*/
 @property (strong, nonatomic) NSDictionary *userMessageDict;
