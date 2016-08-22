@@ -36,6 +36,11 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    NSDictionary *loginDic = [[NSUserDefaults standardUserDefaults] valueForKey:@"isLogin"];
+    if (loginDic.count) {
+        return 6;
+    }
     return SFNumber;
 }
 
@@ -76,6 +81,37 @@
     }];
     
 }
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 100;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+
+    NSDictionary *loginDic = [[NSUserDefaults standardUserDefaults] valueForKey:@"isLogin"];
+    if (loginDic.count) {
+        UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SFScreen.width, 100)];
+        footView.backgroundColor = SFMainColor;
+        UIButton *existBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        existBtn.frame = CGRectMake(50, 42, SFScreen.width-100, 45);
+        [existBtn setImage:[UIImage imageNamed:@"我的界面退出登录按钮"] forState:UIControlStateNormal];
+        [existBtn addTarget:self action:@selector(existBtnMethod) forControlEvents:UIControlEventTouchUpInside];
+        
+        [footView addSubview:existBtn];
+        return footView;
+    }
+    
+    
+    return nil;
+}
+
+- (void)existBtnMethod {
+    if (_existBtnBlock) {
+        _existBtnBlock();
+    }
+}
+
 
 #pragma mark - setter and getter
 - (NSArray *)tableMessage {

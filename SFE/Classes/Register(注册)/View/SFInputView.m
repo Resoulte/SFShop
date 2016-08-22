@@ -170,7 +170,7 @@
         _backLable = [[UILabel alloc] init];
         _backLable.backgroundColor = [UIColor whiteColor];
         _backLable.layer.borderWidth = 1;
-        _backLable.layer.backgroundColor = SFColor(188, 188, 188).CGColor;
+        _backLable.layer.borderColor = SFColor(188, 188, 188).CGColor;
     }
     return _backLable;
 }

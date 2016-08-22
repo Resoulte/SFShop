@@ -100,6 +100,11 @@ including Freepik Icons. Please consult their
 respective headers for the terms of their individual licenses.
 
 
+## UMengSocialCOM
+
+Copyright 2011 - 2016 UMeng.com. All rights reserved.
+
+
 ## YYModel
 
 The MIT License (MIT)

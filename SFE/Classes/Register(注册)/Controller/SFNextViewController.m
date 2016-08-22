@@ -46,7 +46,7 @@
     NSDictionary *params = @{@"MemberId" : _userMessageDict[@"userName"]};
     
     [self postWithPath:@"appMember/createCode.do" params:params success:^(id json) {
-        SFLog(@"%@", json);
+        SFLog(@"验证码：%@", json);
         if ([json[@"result"] isEqualToString:@"success"]) {
             [self.nextView GCDTime];
         } else if ([json[@"result"] isEqualToString:@"TelephoneExistError"]){
@@ -80,8 +80,12 @@
                              @"Telephone" : _userMessageDict[@"userName"]
                              };
     [self getWithPath:@"appMember/appRegistration.do" params:params success:^(id json) {
+        SFLog(@"注册：%@", json);
         if ([json[@"result"] isEqualToString:@"success"]) {
             [self showTostInView:@"注册成功"];
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setObject:json[@"result"] forKey:@"isLogin"];
+            
             [self performSelector:@selector(returnMyview) withObject:nil afterDelay:1.0];
         }else if([json[@"result"] isEqualToString:@"codeError"]){
             [self showTostInView:@"验证码错误"];

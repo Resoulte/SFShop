@@ -11,4 +11,6 @@ pod 'AFNetworking', '~> 3.1.0'
 pod 'Masonry', '~> 1.0.1'
 pod 'YYModel', '~> 1.0.4'
 pod 'SVProgressHUD', '~> 2.0.3'
+pod 'UMengSocialCOM', '~> 5.2.1'
+
 end

@@ -40,11 +40,15 @@ static AFHTTPClient *client = nil;
     
     // 获取完整的路径
     NSString *url = [kBaseUrl stringByAppendingPathComponent:path];
-    
+    SFLog(@"geturl:%@", url);
     [[AFHTTPClient sharedClient] GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        success(responseObject);
+        if (success) {
+            success(responseObject);
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (failure) {
         failure(error);
+        }
     }];
 }
 
@@ -52,12 +56,16 @@ static AFHTTPClient *client = nil;
     
     // 获取完整的路径
     NSString *url = [kBaseUrl stringByAppendingPathComponent:path];
-    
+    SFLog(@"posturl:%@", url);
     [[AFHTTPClient sharedClient] POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        success(responseObject);
+        if (success) {
+            success(responseObject);
+        }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failure(error);
+        if (failure) {
+            failure(error);
+        }
     }];
     
 }

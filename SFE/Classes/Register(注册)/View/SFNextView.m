@@ -203,8 +203,8 @@
 
 // 注册按钮点击调用方法
 - (void)registeBtnRequest {
-    if (_repeatTimeBtnBlock) {
-        _repeatTimeBtnBlock(_codeTextFiled.text);
+    if (_registerMethodBlock) {
+        _registerMethodBlock(_codeTextFiled.text);
     }
     
 }

@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^qqLoginBlock)();
+typedef void(^wechatLoginBlock)();
+typedef void(^weiboLoginBlock)();
+
 @interface SFThirdLoginView : UIView
+
+/**qq登录*/
+@property (copy, nonatomic) qqLoginBlock qqLoginBlock;
+/**微信登录*/
+@property (copy, nonatomic) wechatLoginBlock wechatLoginBlock;
+/**微博登录*/
+@property (copy, nonatomic) weiboLoginBlock weiboLoginBlock ;
 
 @end

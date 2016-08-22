@@ -7,6 +7,7 @@
 //
 
 #import "SFThirdLoginView.h"
+#import <UMSocial.h>
 
 @interface SFThirdLoginView ()
 
@@ -92,10 +93,11 @@
 
     if (!_lineWordLable) {
         _lineWordLable = [[UILabel alloc] init];
-        _lineLable.text = @"一键登录";
-        _lineLable.textColor = SFColor(190, 190, 190);
-        _lineLable.textAlignment = NSTextAlignmentCenter;
-        _lineLable.font = [UIFont systemFontOfSize:16.0];
+        _lineWordLable.text = @"一键登录";
+        _lineWordLable.textColor = SFColor(190, 190, 190);
+        _lineWordLable.textAlignment = NSTextAlignmentCenter;
+        _lineWordLable.font = [UIFont systemFontOfSize:16.0];
+        _lineWordLable.backgroundColor = SFMainColor;
 
     }
     return _lineWordLable;
@@ -106,6 +108,7 @@
     if (!_qqBtn) {
         _qqBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_qqBtn setImage:[UIImage imageNamed:@"登录界面qq登陆"] forState:UIControlStateNormal];
+        [_qqBtn addTarget:self action:@selector(qqLogin) forControlEvents:UIControlEventTouchUpInside];
     }
     return _qqBtn;
 }
@@ -115,6 +118,7 @@
     if (!_wechatBtn) {
         _wechatBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_wechatBtn setImage:[UIImage imageNamed:@"登录界面微信登录"] forState:UIControlStateNormal];
+        [_wechatBtn addTarget:self action:@selector(wechatLogin) forControlEvents:UIControlEventTouchUpInside];
     }
     return _wechatBtn;
 }
@@ -124,7 +128,29 @@
     if (!_weiboBtn) {
         _weiboBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_weiboBtn setImage:[UIImage imageNamed:@"登陆界面微博登录"] forState:UIControlStateNormal];
+        [_weiboBtn addTarget:self action:@selector(weiboLogin) forControlEvents:UIControlEventTouchUpInside];
     }
     return _weiboBtn;
+}
+
+#pragma mark - 第三方登录
+- (void)qqLogin {
+    
+    if (_qqLoginBlock) {
+        _qqLoginBlock();
+    }
+}
+
+- (void)wechatLogin {
+
+    if (_wechatLoginBlock) {
+        _wechatLoginBlock();
+    }
+}
+
+- (void)weiboLogin {
+    if (_weiboLoginBlock) {
+        _weiboLoginBlock();
+    }
 }
 @end

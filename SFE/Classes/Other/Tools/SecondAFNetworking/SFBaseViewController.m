@@ -17,6 +17,12 @@
 
 @implementation SFBaseViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = SFMainColor;
+    
+}
+
 - (void)getWithPath:(NSString *)path params:(NSDictionary *)params success:(HttpSuccessBlock)success failure:(HttpFailedBlock)failure {
     
     [SVProgressHUD show];

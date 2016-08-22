@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862941D697E34003D66C3 /* SFLoginViewController.m */; };
+		04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862971D697F38003D66C3 /* SFLoginInputView.m */; };
+		04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */; };
 		04CA49911D63FDA0004C2D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49901D63FDA0004C2D7B /* main.m */; };
 		04CA499C1D63FDA1004C2D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499B1D63FDA1004C2D7B /* Assets.xcassets */; };
 		04CA499F1D63FDA1004C2D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499D1D63FDA1004C2D7B /* LaunchScreen.storyboard */; };
@@ -36,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A862931D697E34003D66C3 /* SFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginViewController.h; sourceTree = "<group>"; };
+		04A862941D697E34003D66C3 /* SFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginViewController.m; sourceTree = "<group>"; };
+		04A862961D697F38003D66C3 /* SFLoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginInputView.h; sourceTree = "<group>"; };
+		04A862971D697F38003D66C3 /* SFLoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginInputView.m; sourceTree = "<group>"; };
+		04A862991D69A261003D66C3 /* SFLoginThirdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginThirdView.h; sourceTree = "<group>"; };
+		04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginThirdView.m; sourceTree = "<group>"; };
 		04CA498C1D63FDA0004C2D7B /* SFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA49901D63FDA0004C2D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04CA499B1D63FDA1004C2D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +111,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A8628F1D697DCF003D66C3 /* Login登录 */ = {
+			isa = PBXGroup;
+			children = (
+				04A862901D697DCF003D66C3 /* Controller */,
+				04A862911D697DCF003D66C3 /* Model */,
+				04A862921D697DCF003D66C3 /* View */,
+			);
+			path = "Login登录";
+			sourceTree = "<group>";
+		};
+		04A862901D697DCF003D66C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A862931D697E34003D66C3 /* SFLoginViewController.h */,
+				04A862941D697E34003D66C3 /* SFLoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A862911D697DCF003D66C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A862921D697DCF003D66C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A862961D697F38003D66C3 /* SFLoginInputView.h */,
+				04A862971D697F38003D66C3 /* SFLoginInputView.m */,
+				04A862991D69A261003D66C3 /* SFLoginThirdView.h */,
+				04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04CA49831D63FDA0004C2D7B = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +189,7 @@
 		04CA49B51D645907004C2D7B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04A8628F1D697DCF003D66C3 /* Login登录 */,
 				04CA49F51D655AB5004C2D7B /* Register(注册) */,
 				04CA49B61D645907004C2D7B /* Buy(购物) */,
 				04CA49BC1D645907004C2D7B /* Class(分类) */,
@@ -483,6 +530,7 @@
 				TargetAttributes = {
 					04CA498B1D63FDA0004C2D7B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ABVADH5P5W;
 					};
 				};
 			};
@@ -572,9 +620,11 @@
 			files = (
 				04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */,
 				04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */,
+				04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */,
 				04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
+				04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */,
 				04E738A11D675E95007B44A8 /* UIImageView+SFSDWebImage.m in Sources */,
 				04E738921D65EC2E007B44A8 /* SFThirdLoginView.m in Sources */,
 				04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */,
@@ -589,6 +639,7 @@
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
 				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
+				04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */,
 				04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */,
 				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
@@ -697,6 +748,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SFE/Classes/Other/SFE.pch;
 				INFOPLIST_FILE = SFE/Info.plist;
@@ -704,6 +758,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjsxt.SFE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -713,6 +768,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SFE/Classes/Other/SFE.pch;
 				INFOPLIST_FILE = SFE/Info.plist;
@@ -720,6 +778,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjsxt.SFE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -8,6 +8,7 @@
 
 #import "SFMyViewController.h"
 #import "SFRegisterViewController.h"
+#import "SFLoginViewController.h"
 #import "SFMyTableView.h"
 #import "SFMyHeaderView.h"
 
@@ -30,18 +31,18 @@
     // 添加页面所有子控件
     [self setupAllView];
     // 设置所有子控件的布局
-    [self setupAllConstrains];
+//    [self setupAllConstrains];
 }
 
 - (void)setupAllView {
-
-    [self.view addSubview:self.headerView];
+    
+//    [self.view addSubview:self.headerView];
     [self.view addSubview:self.tableView];
-    }
+    self.edgesForExtendedLayout = 0;
+}
 
 - (void)setupAllConstrains {
     
-    self.edgesForExtendedLayout = 0;
     [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.offset(0);
         make.height.mas_equalTo(@125);
@@ -60,13 +61,17 @@
 - (SFMyHeaderView *)headerView {
 
     if (!_headerView) {
-        _headerView = [[SFMyHeaderView alloc] init];
+        _headerView = [[SFMyHeaderView alloc] initWithFrame:CGRectMake(0, 0, SFScreen.width, 160)];
         
         __weak typeof(self) weakSelf = self;
         _headerView.registerBlock = ^(){
             SFRegisterViewController *registe = [[SFRegisterViewController alloc] init];
             [weakSelf.navigationController pushViewController:registe animated:YES];
-
+        };
+        
+        _headerView.loginBlock = ^() {
+            SFLoginViewController *login = [[SFLoginViewController alloc] init];
+            [weakSelf.navigationController pushViewController:login animated:YES];
         };
     }
     return _headerView;
@@ -76,8 +81,15 @@
 - (SFMyTableView *)tableView {
 
     if (!_tableView) {
-        _tableView = [[SFMyTableView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) style:UITableViewStylePlain];
+        _tableView = [[SFMyTableView alloc] initWithFrame:CGRectMake(0, 0, SFScreen.width, SFScreen.height) style:UITableViewStylePlain];
             }
+        __weak typeof(self) weakSelf = self;
+        _tableView.existBtnBlock = ^(){
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"isLogin"];
+            [weakSelf.tableView reloadData];
+            [weakSelf.headerView reloadHeaderView];
+    };
+    _tableView.tableHeaderView = self.headerView;
     return _tableView;
 }
 

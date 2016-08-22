@@ -10,4 +10,7 @@
 
 @interface SFMyTableView : UITableView
 
+/**退出登录block*/
+@property (copy, nonatomic)  void(^existBtnBlock)();
+
 @end
