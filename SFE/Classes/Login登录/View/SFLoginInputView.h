@@ -12,7 +12,7 @@
 typedef void(^loginBlock)(NSDictionary *userMessage);
 @interface SFLoginInputView : UIView
 
-/**登录Block*/
+/**登录信息返回Block*/
 @property (copy, nonatomic) loginBlock loginBlock;
 
 @end

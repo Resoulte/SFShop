@@ -28,7 +28,8 @@
     if (self) {
         self.delegate = self;
         self.dataSource = self;
-        self.bounces = NO;
+//        self.bounces = NO;
+        self.backgroundColor = SFMainColor;
 
     }
     return self;
@@ -40,8 +41,8 @@
     NSDictionary *loginDic = [[NSUserDefaults standardUserDefaults] valueForKey:@"isLogin"];
     if (loginDic.count) {
         return 6;
-    }
-    return SFNumber;
+    } else
+        return SFNumber;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,9 +55,11 @@
     SFMyMessage *message = self.tableMessage[indexPath.row];
     cell.leftImage.image = [UIImage imageNamed:message.image];
     cell.leftLable.text = message.title;
+//    cell.message = self.tableMessage[indexPath.row];
     
     if (indexPath.row == 3) {
-        cell.rightImage.hidden = YES;
+        UIImageView *nextImage = [cell valueForKey:@"rightImage"];
+        nextImage.hidden = YES;
         [self addPhoneLable:cell];
     }
     

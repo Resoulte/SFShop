@@ -7,8 +7,6 @@
 //
 
 #import "SFMyTableViewCell.h"
-#import <Masonry.h>
-#define SFColor(r, g, b) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:1]
 
 @interface SFMyTableViewCell ()
 
@@ -90,21 +88,21 @@
 - (UIView *)lineView {
     if (!_lineView) {
         _lineView = [[UIView alloc] init];
-        _lineView.backgroundColor = SFColor(244, 244, 244);
+        _lineView.backgroundColor = SFMainColor;
     }
     return _lineView;
 }
 
-- (void)setMessage:(SFMyMessage *)message {
-
-    self.message = message;
-    
-    self.leftImage.image = [UIImage imageNamed:message.image];
-    self.leftLable.text = message.title;
-    
-    
-}
-
+//- (void)setMessage:(SFMyMessage *)message {
+//
+//    self.message = message;
+//    
+//    self.leftImage.image = [UIImage imageNamed:message.image];
+//    self.leftLable.text = message.title;
+//    
+//    
+//}
+//
 //- (void)setSourceDic:(NSDictionary *)sourceDic {
 //
 //    self.leftLable.text = sourceDic[@"title"];

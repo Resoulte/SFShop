@@ -22,7 +22,7 @@
 
 
 /**message模型*/
-@property (strong, nonatomic) SFMyMessage *message;
+//@property (strong, nonatomic) SFMyMessage *message;
 
 /**cell的资源*/
 //@property (strong, nonatomic) NSDictionary *sourceDic;

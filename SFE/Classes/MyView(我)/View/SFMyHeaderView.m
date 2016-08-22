@@ -107,6 +107,35 @@
 }
 
 #pragma mark - setter and getter
+- (UIImageView *)iconImage {
+    
+    if (!_iconImage) {
+        _iconImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"登陆界面微博登录"]];
+    }
+    return _iconImage;
+}
+
+- (UILabel *)usernameLable {
+    
+    if (!_usernameLable) {
+        _usernameLable = [[UILabel alloc] init];
+        _usernameLable.text = @"用户名";
+        _usernameLable.textColor = [UIColor whiteColor];
+    }
+    return _usernameLable;
+}
+
+- (UILabel *)lvLable {
+    
+    if (!_lvLable) {
+        _lvLable = [[UILabel alloc] init];
+        _lvLable.text = @"一级";
+        _lvLable.textColor = [UIColor whiteColor];
+    }
+    return _lvLable;
+}
+
+
 - (UIImageView *)imageView {
     
     if (!_imageView) {
@@ -140,33 +169,6 @@
     return _registerBtn;
 }
 
-- (UIImageView *)iconImage {
-
-    if (!_iconImage) {
-        _iconImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"登陆界面微博登录"]];
-    }
-    return _iconImage;
-}
-
-- (UILabel *)usernameLable {
-
-    if (!_usernameLable) {
-        _usernameLable = [[UILabel alloc] init];
-        _usernameLable.text = @"用户名";
-        _usernameLable.textColor = [UIColor whiteColor];
-    }
-    return _usernameLable;
-}
-
-- (UILabel *)lvLable {
-
-    if (!_lvLable) {
-        _lvLable = [[UILabel alloc] init];
-        _lvLable.text = @"一级";
-        _lvLable.textColor = [UIColor whiteColor];
-    }
-    return _lvLable;
-}
 
 - (void)registerAction {
 

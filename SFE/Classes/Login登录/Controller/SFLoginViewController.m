@@ -58,7 +58,7 @@
 //    返回参数:Map<String,Object>
 //    成功标识:result 【error为登陆失败;返回 数字 表示购物车中商品数量】
 //    是否已领取优惠券标识:ReceiveMark 【0:未领取;1:已领取】
-    [self getWithPath:@"appLogin.do" params:dict success:^(id json) {
+    [self getWithPath:@"appMember/appLogin.do" params:dict success:^(id json) {
         //用户不存在
         //密码错误
         //登陆成功
