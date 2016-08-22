@@ -6,8 +6,8 @@
 //  Copyright © 2016年 shifei. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SFBaseViewController.h"
 
-@interface SFBuyViewController : UIViewController
+@interface SFBuyViewController : SFBaseViewController
 
 @end

@@ -10,6 +10,9 @@
 		04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862941D697E34003D66C3 /* SFLoginViewController.m */; };
 		04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862971D697F38003D66C3 /* SFLoginInputView.m */; };
 		04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */; };
+		04A8629E1D6B2050003D66C3 /* SFUIScroolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629D1D6B2050003D66C3 /* SFUIScroolView.m */; };
+		04A862A11D6B2ED0003D66C3 /* SFTwoButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862A01D6B2ED0003D66C3 /* SFTwoButtonView.m */; };
+		04A862A41D6B3A8C003D66C3 /* SFDealTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862A31D6B3A8C003D66C3 /* SFDealTableView.m */; };
 		04CA49911D63FDA0004C2D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49901D63FDA0004C2D7B /* main.m */; };
 		04CA499C1D63FDA1004C2D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499B1D63FDA1004C2D7B /* Assets.xcassets */; };
 		04CA499F1D63FDA1004C2D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499D1D63FDA1004C2D7B /* LaunchScreen.storyboard */; };
@@ -45,6 +48,12 @@
 		04A862971D697F38003D66C3 /* SFLoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginInputView.m; sourceTree = "<group>"; };
 		04A862991D69A261003D66C3 /* SFLoginThirdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginThirdView.h; sourceTree = "<group>"; };
 		04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginThirdView.m; sourceTree = "<group>"; };
+		04A8629C1D6B2050003D66C3 /* SFUIScroolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUIScroolView.h; sourceTree = "<group>"; };
+		04A8629D1D6B2050003D66C3 /* SFUIScroolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUIScroolView.m; sourceTree = "<group>"; };
+		04A8629F1D6B2ED0003D66C3 /* SFTwoButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTwoButtonView.h; sourceTree = "<group>"; };
+		04A862A01D6B2ED0003D66C3 /* SFTwoButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTwoButtonView.m; sourceTree = "<group>"; };
+		04A862A21D6B3A8C003D66C3 /* SFDealTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDealTableView.h; sourceTree = "<group>"; };
+		04A862A31D6B3A8C003D66C3 /* SFDealTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDealTableView.m; sourceTree = "<group>"; };
 		04CA498C1D63FDA0004C2D7B /* SFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA49901D63FDA0004C2D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04CA499B1D63FDA1004C2D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +127,8 @@
 				04A862911D697DCF003D66C3 /* Model */,
 				04A862921D697DCF003D66C3 /* View */,
 			);
-			path = "Login登录";
+			name = "Login登录";
+			path = "../Login登录";
 			sourceTree = "<group>";
 		};
 		04A862901D697DCF003D66C3 /* Controller */ = {
@@ -189,8 +199,6 @@
 		04CA49B51D645907004C2D7B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				04A8628F1D697DCF003D66C3 /* Login登录 */,
-				04CA49F51D655AB5004C2D7B /* Register(注册) */,
 				04CA49B61D645907004C2D7B /* Buy(购物) */,
 				04CA49BC1D645907004C2D7B /* Class(分类) */,
 				04CA49C21D645907004C2D7B /* Main(主要) */,
@@ -305,6 +313,8 @@
 		04CA49C81D645907004C2D7B /* MyView(我) */ = {
 			isa = PBXGroup;
 			children = (
+				04CA49F51D655AB5004C2D7B /* Register(注册) */,
+				04A8628F1D697DCF003D66C3 /* Login登录 */,
 				04CA49C91D645907004C2D7B /* Controller */,
 				04CA49CC1D645907004C2D7B /* Model */,
 				04CA49CD1D645907004C2D7B /* View */,
@@ -385,6 +395,12 @@
 		04CA49D61D645907004C2D7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04A8629C1D6B2050003D66C3 /* SFUIScroolView.h */,
+				04A8629D1D6B2050003D66C3 /* SFUIScroolView.m */,
+				04A8629F1D6B2ED0003D66C3 /* SFTwoButtonView.h */,
+				04A862A01D6B2ED0003D66C3 /* SFTwoButtonView.m */,
+				04A862A21D6B3A8C003D66C3 /* SFDealTableView.h */,
+				04A862A31D6B3A8C003D66C3 /* SFDealTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -405,7 +421,8 @@
 				04CA49F71D655AB5004C2D7B /* Model */,
 				04CA49F81D655AB5004C2D7B /* View */,
 			);
-			path = "Register(注册)";
+			name = "Register(注册)";
+			path = "../Register(注册)";
 			sourceTree = "<group>";
 		};
 		04CA49F61D655AB5004C2D7B /* Controller */ = {
@@ -620,6 +637,7 @@
 			files = (
 				04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */,
 				04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */,
+				04A862A41D6B3A8C003D66C3 /* SFDealTableView.m in Sources */,
 				04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */,
 				04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
@@ -631,6 +649,7 @@
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
 				04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */,
 				04CA49DA1D645907004C2D7B /* SFMyViewController.m in Sources */,
+				04A8629E1D6B2050003D66C3 /* SFUIScroolView.m in Sources */,
 				04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */,
 				04E738AB1D689EED007B44A8 /* SFBaseViewController.m in Sources */,
 				04E738951D66A045007B44A8 /* SFNextView.m in Sources */,
@@ -640,6 +659,7 @@
 				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
 				04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */,
+				04A862A11D6B2ED0003D66C3 /* SFTwoButtonView.m in Sources */,
 				04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */,
 				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
