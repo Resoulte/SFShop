@@ -11,13 +11,14 @@
 #import "SFDealTableView.h"
 #import "SFNewDealItem.h"
 #import "SFBrandDealItem.h"
-#import "SFNewDealCell.h"
-#import "SFBrandDealCell.h"
+#import "SFDetailViewController.h"
+
+
 
 //#import "SFUIScroolView.h"
 #import <SDCycleScrollView.h>
 
-@interface SFTimeViewController () <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SFTimeViewController () <UIScrollViewDelegate>
 
 /**整个页面的scrollView*/
 @property (strong, nonatomic) UIScrollView *mainScrollView;
@@ -26,13 +27,14 @@
 /**切换view*/
 @property (strong, nonatomic) SFTwoButtonView *twoBtnView;
 /**新品团购tableView*/
-@property (strong, nonatomic) UITableView *newsTableView;
+@property (strong, nonatomic) SFDealTableView *newsTableView;
 /**品牌团购tableView*/
-@property (strong, nonatomic) UITableView *brandTableView;
+@property (strong, nonatomic) SFDealTableView *brandTableView;
 /**存放新品团购数据模型*/
 @property (strong, nonatomic) NSArray *newsArray;
 /**存放品牌团购数据模型*/
 @property (strong, nonatomic) NSArray *brandArray;
+
 
 @end
 
@@ -118,14 +120,16 @@
     [self getWithPath:@"/appActivity/appHomeGoodsList.do" params:nil success:^(id json) {
 //        SFLog(@"json%@", json);
         self.newsArray = [NSArray yy_modelArrayWithClass:[SFNewDealItem class] json:json];
-        [self.newsTableView reloadData];
+        
+        //  数据赋值
+        self.newsTableView.newsArray = self.newsArray;
         
         CGRect newRect = self.newsTableView.frame;
         newRect.size.height = self.newsArray.count * 170;
         self.newsTableView.frame = newRect;
         
         self.mainScrollView.contentSize = CGSizeMake(0, self.newsArray.count * 170 + 280);
-        
+        [self.newsTableView reloadData];
         SFLog(@"item%@", self.newsArray);
     } failure:^(NSError *error) {
         
@@ -149,11 +153,15 @@
         SFLog(@"brand%@", json);
         self.brandArray = [NSArray yy_modelArrayWithClass:[SFBrandDealItem class] json:json];
         
-        CGRect brandRect = _brandTableView.frame;
-        brandRect.size.height = _brandArray.count * 200;
-        _brandTableView.frame = brandRect;
+        //  数据赋值
+        self.brandTableView.brandArray = self.brandArray;
+        
+        CGRect brandRect = self.brandTableView.frame;
+        brandRect.size.height = self.brandArray.count * 200;
+        self.brandTableView.frame = brandRect;
+        
         if (self.twoBtnView.brandsDeal.selected) {
-            _mainScrollView.contentSize = CGSizeMake(0, _brandArray.count * 200 + 280);
+            self.mainScrollView.contentSize = CGSizeMake(0, self.newsArray.count  * 200 + 280);
         }
         
         [self.brandTableView reloadData];
@@ -161,43 +169,6 @@
     } failure:^(NSError *error) {
         
     }];
-}
-
-#pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    if (tableView == _newsTableView) {
-        return self.newsArray.count;
-    }
-    return 10;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 170;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (tableView == _newsTableView) {
-        SFNewDealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-        if (!cell) {
-            cell = [[SFNewDealCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-        }
-        
-        cell.newsDealItem = self.newsArray[indexPath.row];
-        return cell;
-    } else {
-         SFBrandDealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
-        if (!cell) {
-            cell = [[SFBrandDealCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2"];
-        }
-        
-        cell.brandItem = self.brandArray[indexPath.row];
-        
-        return cell;
-
-    }
-    
 }
 
 #pragma mark - setter and getter
@@ -277,25 +248,30 @@
 }
 
 
-- (UITableView *)newsTableView {
+- (SFDealTableView *)newsTableView {
 
     if (!_newsTableView) {
-        _newsTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 280, SFScreen.width, 1700) style:UITableViewStylePlain];
-        _newsTableView.delegate = self;
-        _newsTableView.dataSource = self;
+        _newsTableView = [[SFDealTableView alloc] initWithFrame:CGRectMake(0, 280, SFScreen.width, 1700) style:UITableViewStylePlain];
+        
+        _newsTableView.isNewsDeal = YES;
         _newsTableView.bounces = NO;
         
+        __weak typeof(self) weakSelf = self;
+        _newsTableView.newTableSelectedBlock = ^(NSString *GoodsID) {
+            SFDetailViewController *detailVC = [[SFDetailViewController alloc] init];
+            detailVC.GoodsID = GoodsID;
+            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+        };
         
     }
     return _newsTableView;
 }
 
-- (UITableView *)brandTableView {
+- (SFDealTableView *)brandTableView {
 
     if (!_brandTableView) {
-        _brandTableView = [[UITableView alloc] initWithFrame:CGRectMake(SFScreen.width, 280, SFScreen.width, 1700) style:UITableViewStylePlain];
-        _brandTableView.delegate = self;
-        _brandTableView.dataSource = self;
+        _brandTableView = [[SFDealTableView alloc] initWithFrame:CGRectMake(SFScreen.width, 280, SFScreen.width, 1700) style:UITableViewStylePlain];
+        _brandTableView.isNewsDeal = NO;
         _brandTableView.bounces = NO;
         
     }

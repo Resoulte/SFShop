@@ -10,13 +10,16 @@
 		04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862941D697E34003D66C3 /* SFLoginViewController.m */; };
 		04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862971D697F38003D66C3 /* SFLoginInputView.m */; };
 		04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */; };
-		04A8629E1D6B2050003D66C3 /* SFUIScroolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629D1D6B2050003D66C3 /* SFUIScroolView.m */; };
 		04A862A11D6B2ED0003D66C3 /* SFTwoButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862A01D6B2ED0003D66C3 /* SFTwoButtonView.m */; };
 		04A862A41D6B3A8C003D66C3 /* SFDealTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862A31D6B3A8C003D66C3 /* SFDealTableView.m */; };
 		04A862A71D6B56D6003D66C3 /* SFNewDealItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862A61D6B56D6003D66C3 /* SFNewDealItem.m */; };
 		04A862AA1D6B56F4003D66C3 /* SFBrandDealItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862A91D6B56F4003D66C3 /* SFBrandDealItem.m */; };
 		04A862AD1D6BF6E3003D66C3 /* SFNewDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862AC1D6BF6E3003D66C3 /* SFNewDealCell.m */; };
 		04A862B01D6C091C003D66C3 /* SFBrandDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862AF1D6C091C003D66C3 /* SFBrandDealCell.m */; };
+		04A862B71D6C4166003D66C3 /* SFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862B61D6C4166003D66C3 /* SFDetailViewController.m */; };
+		04A862BA1D6C6D3B003D66C3 /* SFDetailTopImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862B91D6C6D3B003D66C3 /* SFDetailTopImage.m */; };
+		04A862BD1D6C722B003D66C3 /* SFDetailTopImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862BC1D6C722B003D66C3 /* SFDetailTopImageItem.m */; };
+		04A862C01D6C8BF3003D66C3 /* SFDetailTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862BF1D6C8BF3003D66C3 /* SFDetailTitleView.m */; };
 		04CA49911D63FDA0004C2D7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49901D63FDA0004C2D7B /* main.m */; };
 		04CA499C1D63FDA1004C2D7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499B1D63FDA1004C2D7B /* Assets.xcassets */; };
 		04CA499F1D63FDA1004C2D7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CA499D1D63FDA1004C2D7B /* LaunchScreen.storyboard */; };
@@ -52,8 +55,6 @@
 		04A862971D697F38003D66C3 /* SFLoginInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginInputView.m; sourceTree = "<group>"; };
 		04A862991D69A261003D66C3 /* SFLoginThirdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginThirdView.h; sourceTree = "<group>"; };
 		04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginThirdView.m; sourceTree = "<group>"; };
-		04A8629C1D6B2050003D66C3 /* SFUIScroolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFUIScroolView.h; sourceTree = "<group>"; };
-		04A8629D1D6B2050003D66C3 /* SFUIScroolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFUIScroolView.m; sourceTree = "<group>"; };
 		04A8629F1D6B2ED0003D66C3 /* SFTwoButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTwoButtonView.h; sourceTree = "<group>"; };
 		04A862A01D6B2ED0003D66C3 /* SFTwoButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTwoButtonView.m; sourceTree = "<group>"; };
 		04A862A21D6B3A8C003D66C3 /* SFDealTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDealTableView.h; sourceTree = "<group>"; };
@@ -66,6 +67,14 @@
 		04A862AC1D6BF6E3003D66C3 /* SFNewDealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFNewDealCell.m; sourceTree = "<group>"; };
 		04A862AE1D6C091C003D66C3 /* SFBrandDealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBrandDealCell.h; sourceTree = "<group>"; };
 		04A862AF1D6C091C003D66C3 /* SFBrandDealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBrandDealCell.m; sourceTree = "<group>"; };
+		04A862B51D6C4166003D66C3 /* SFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailViewController.h; sourceTree = "<group>"; };
+		04A862B61D6C4166003D66C3 /* SFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailViewController.m; sourceTree = "<group>"; };
+		04A862B81D6C6D3B003D66C3 /* SFDetailTopImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailTopImage.h; sourceTree = "<group>"; };
+		04A862B91D6C6D3B003D66C3 /* SFDetailTopImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailTopImage.m; sourceTree = "<group>"; };
+		04A862BB1D6C722B003D66C3 /* SFDetailTopImageItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailTopImageItem.h; sourceTree = "<group>"; };
+		04A862BC1D6C722B003D66C3 /* SFDetailTopImageItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailTopImageItem.m; sourceTree = "<group>"; };
+		04A862BE1D6C8BF3003D66C3 /* SFDetailTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailTitleView.h; sourceTree = "<group>"; };
+		04A862BF1D6C8BF3003D66C3 /* SFDetailTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailTitleView.m; sourceTree = "<group>"; };
 		04CA498C1D63FDA0004C2D7B /* SFE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CA49901D63FDA0004C2D7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04CA499B1D63FDA1004C2D7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +175,45 @@
 				04A862971D697F38003D66C3 /* SFLoginInputView.m */,
 				04A862991D69A261003D66C3 /* SFLoginThirdView.h */,
 				04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04A862B11D6C4135003D66C3 /* shopDetail(商品详情) */ = {
+			isa = PBXGroup;
+			children = (
+				04A862B21D6C4135003D66C3 /* Controller */,
+				04A862B31D6C4135003D66C3 /* Model */,
+				04A862B41D6C4135003D66C3 /* View */,
+			);
+			path = "shopDetail(商品详情)";
+			sourceTree = "<group>";
+		};
+		04A862B21D6C4135003D66C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A862B51D6C4166003D66C3 /* SFDetailViewController.h */,
+				04A862B61D6C4166003D66C3 /* SFDetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A862B31D6C4135003D66C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A862BB1D6C722B003D66C3 /* SFDetailTopImageItem.h */,
+				04A862BC1D6C722B003D66C3 /* SFDetailTopImageItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A862B41D6C4135003D66C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A862B81D6C6D3B003D66C3 /* SFDetailTopImage.h */,
+				04A862B91D6C6D3B003D66C3 /* SFDetailTopImage.m */,
+				04A862BE1D6C8BF3003D66C3 /* SFDetailTitleView.h */,
+				04A862BF1D6C8BF3003D66C3 /* SFDetailTitleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -381,6 +429,7 @@
 		04CA49D11D645907004C2D7B /* Time(限时特卖) */ = {
 			isa = PBXGroup;
 			children = (
+				04A862B11D6C4135003D66C3 /* shopDetail(商品详情) */,
 				04CA49D21D645907004C2D7B /* Controller */,
 				04CA49D51D645907004C2D7B /* Model */,
 				04CA49D61D645907004C2D7B /* View */,
@@ -411,8 +460,6 @@
 		04CA49D61D645907004C2D7B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04A8629C1D6B2050003D66C3 /* SFUIScroolView.h */,
-				04A8629D1D6B2050003D66C3 /* SFUIScroolView.m */,
 				04A8629F1D6B2ED0003D66C3 /* SFTwoButtonView.h */,
 				04A862A01D6B2ED0003D66C3 /* SFTwoButtonView.m */,
 				04A862A21D6B3A8C003D66C3 /* SFDealTableView.h */,
@@ -671,11 +718,12 @@
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
 				04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */,
 				04CA49DA1D645907004C2D7B /* SFMyViewController.m in Sources */,
-				04A8629E1D6B2050003D66C3 /* SFUIScroolView.m in Sources */,
 				04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */,
 				04E738AB1D689EED007B44A8 /* SFBaseViewController.m in Sources */,
 				04E738951D66A045007B44A8 /* SFNextView.m in Sources */,
 				04E738981D66A34E007B44A8 /* SFNextViewController.m in Sources */,
+				04A862C01D6C8BF3003D66C3 /* SFDetailTitleView.m in Sources */,
+				04A862BA1D6C6D3B003D66C3 /* SFDetailTopImage.m in Sources */,
 				04CA49E61D648B2F004C2D7B /* SFNavViewController.m in Sources */,
 				04A862AD1D6BF6E3003D66C3 /* SFNewDealCell.m in Sources */,
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
@@ -686,6 +734,8 @@
 				04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */,
 				04A862AA1D6B56F4003D66C3 /* SFBrandDealItem.m in Sources */,
 				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
+				04A862B71D6C4166003D66C3 /* SFDetailViewController.m in Sources */,
+				04A862BD1D6C722B003D66C3 /* SFDetailTopImageItem.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

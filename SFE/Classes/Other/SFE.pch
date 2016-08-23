@@ -17,6 +17,7 @@
 #import "UIImage+SFImage.h"
 #import "SFHttpTools.h"
 #import <UIImageView+WebCache.h>
+#import "SDCycleScrollView.h"
 
 
 
