@@ -9,6 +9,11 @@
 #import "SFTimeViewController.h"
 #import "SFTwoButtonView.h"
 #import "SFDealTableView.h"
+#import "SFNewDealItem.h"
+#import "SFBrandDealItem.h"
+#import "SFNewDealCell.h"
+#import "SFBrandDealCell.h"
+
 //#import "SFUIScroolView.h"
 #import <SDCycleScrollView.h>
 
@@ -24,6 +29,10 @@
 @property (strong, nonatomic) UITableView *newsTableView;
 /**品牌团购tableView*/
 @property (strong, nonatomic) UITableView *brandTableView;
+/**存放新品团购数据模型*/
+@property (strong, nonatomic) NSArray *newsArray;
+/**存放品牌团购数据模型*/
+@property (strong, nonatomic) NSArray *brandArray;
 
 @end
 
@@ -45,7 +54,10 @@
     [self.mainScrollView addSubview:self.brandTableView];
     [self.mainScrollView addSubview:self.twoBtnView];
     
+    
     [self requestHttpHeadImage];
+    [self requestHttpNewsDeal];
+    [self requestHttpBrandDeal];
     
     
 }
@@ -79,7 +91,7 @@
 - (void)requestHttpHeadImage {
     
     [self getWithPath:@"appHome/appHome.do" params:nil success:^(id json) {
-        SFLog(@"%@", json);
+//        SFLog(@"%@", json);
         NSMutableArray *imageArray = [NSMutableArray array];
         for (NSDictionary *dict in json) {
             [imageArray addObject:dict[@"ImgView"]];
@@ -90,9 +102,73 @@
     }];
 }
 
+/*URL:h"p://123.57.141.249:8080/beautalk/appActivity/appHomeGoodsList.do 返回数据:List<Map<String,Object>>
+ 商品ID : GoodsId
+ 国家名称 : CountryName
+ 国旗图片 : CountryImg
+ 缩略图 :ImgView
+ 购买数量 : BuyCount
+ 折扣 :Discount
+ 商品名称:Title 外币价格:ForeignPrice 人民币价格:Price
+ 其他价格 :OtherPrice 活动时间(距离结束时间) :RestTime
+ */
+// 请求新品团购数据
+- (void)requestHttpNewsDeal {
+
+    [self getWithPath:@"/appActivity/appHomeGoodsList.do" params:nil success:^(id json) {
+//        SFLog(@"json%@", json);
+        self.newsArray = [NSArray yy_modelArrayWithClass:[SFNewDealItem class] json:json];
+        [self.newsTableView reloadData];
+        
+        CGRect newRect = self.newsTableView.frame;
+        newRect.size.height = self.newsArray.count * 170;
+        self.newsTableView.frame = newRect;
+        
+        self.mainScrollView.contentSize = CGSizeMake(0, self.newsArray.count * 170 + 280);
+        
+        SFLog(@"item%@", self.newsArray);
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+/*
+ URL:h"p://123.57.141.249:8080/beautalk/appActivity/appActivityList.do 返回数据:List<Map<String,Object>>
+ 活动ID : AcZvityId
+ 图片地址 : ImgView 是否有中间页:IfMiddlePage 品牌LOGO图片地址 : LogoImg
+ 品牌名称 : ShopTitle
+ 活动简介 :Content 活动时间(距离结束时间) :AcZvityDate
+ 格式:
+ [{"AcZvityId":0,"ImgView":"h"p://123.57.141.249:8080/beautalk/testImg/act2.png","LogoImg ":"h"p://123.57.141.249:8080/beautalk/testImg/ act2.png","ShopTitle":"SWEETSHOP","AcZvityDate":"240","Content":"全场7折起"}]
+ */
+
+// 请求品牌团购数据
+- (void)requestHttpBrandDeal {
+
+    [self getWithPath:@"appActivity/appActivityList.do" params:nil success:^(id json) {
+        SFLog(@"brand%@", json);
+        self.brandArray = [NSArray yy_modelArrayWithClass:[SFBrandDealItem class] json:json];
+        
+        CGRect brandRect = _brandTableView.frame;
+        brandRect.size.height = _brandArray.count * 200;
+        _brandTableView.frame = brandRect;
+        if (self.twoBtnView.brandsDeal.selected) {
+            _mainScrollView.contentSize = CGSizeMake(0, _brandArray.count * 200 + 280);
+        }
+        
+        [self.brandTableView reloadData];
+    
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
+    if (tableView == _newsTableView) {
+        return self.newsArray.count;
+    }
     return 10;
 }
 
@@ -101,28 +177,34 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", indexPath.row];
     
     if (tableView == _newsTableView) {
-        cell.backgroundColor = [UIColor redColor];
+        SFNewDealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+        if (!cell) {
+            cell = [[SFNewDealCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        }
+        
+        cell.newsDealItem = self.newsArray[indexPath.row];
+        return cell;
     } else {
-        cell.backgroundColor = [UIColor blueColor];
+         SFBrandDealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
+        if (!cell) {
+            cell = [[SFBrandDealCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2"];
+        }
+        
+        cell.brandItem = self.brandArray[indexPath.row];
+        
+        return cell;
+
     }
     
-    return cell;
 }
 
 #pragma mark - setter and getter
 - (UIScrollView *)mainScrollView {
     
     if (!_mainScrollView) {
-        _mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SFScreen.width, SFScreen.height)];
+        _mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SFScreen.width, SFScreen.height - 64 - 49)];
         _mainScrollView.contentSize = CGSizeMake(0, 1980);
         _mainScrollView.delegate = self;
         
@@ -194,16 +276,7 @@
     }
 }
 
-/*URL:h"p://123.57.141.249:8080/beautalk/appAcZvity/appHomeGoodsList.do 返回数据:List<Map<String,Object>>
- 商品ID : GoodsId
- 国家名称 : CountryName
- 国旗图片 : CountryImg
- 缩略图 :ImgView
- 购买数量 : BuyCount
- 折扣 :Discount
- 商品名称:Title 外币价格:ForeignPrice 人民币价格:Price
- 其他价格 :OtherPrice 活动时间(距离结束时间) :RestTime
-*/
+
 - (UITableView *)newsTableView {
 
     if (!_newsTableView) {
@@ -217,15 +290,6 @@
     return _newsTableView;
 }
 
-/*
-URL:h"p://123.57.141.249:8080/beautalk/appAcZvity/appAcZvityList.do 返回数据:List<Map<String,Object>>
-活动ID : AcZvityId
-图片地址 : ImgView 是否有中间页:IfMiddlePage 品牌LOGO图片地址 : LogoImg
-品牌名称 : ShopTitle
-活动简介 :Content 活动时间(距离结束时间) :AcZvityDate
-格式:
-[{"AcZvityId":0,"ImgView":"h"p://123.57.141.249:8080/beautalk/testImg/act2.png","LogoImg ":"h"p://123.57.141.249:8080/beautalk/testImg/ act2.png","ShopTitle":"SWEETSHOP","AcZvityDate":"240","Content":"全场7折起"}]
-*/
 - (UITableView *)brandTableView {
 
     if (!_brandTableView) {
@@ -237,4 +301,5 @@ URL:h"p://123.57.141.249:8080/beautalk/appAcZvity/appAcZvityList.do 返回数据
     }
     return _brandTableView;
 }
+
 @end

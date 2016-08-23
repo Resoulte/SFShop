@@ -7,7 +7,7 @@
 //
 
 #import "UIImageView+SFSDWebImage.h"
-#import <UIImageView+WebCache.h>
+
 
 @implementation UIImageView (SFSDWebImage)
 

@@ -9,6 +9,7 @@
 /**此次封装的功能依赖于SDWebImage:https://github.com/rs/SDWebImage.git*/
 
 #import <UIKit/UIKit.h>
+#import <UIImageView+WebCache.h>
 
 /**
  *  监听下载成功的Block
