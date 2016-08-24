@@ -34,6 +34,11 @@
 		04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49E81D64AB2F004C2D7B /* SFMyTableViewCell.m */; };
 		04CA49ED1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04CA49EC1D64BC0B004C2D7B /* SFMyMessageTablePlist.plist */; };
 		04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */; };
+		04D2A70D1D6D8DF100AFA977 /* SFDetailTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A70C1D6D8DF100AFA977 /* SFDetailTitleItem.m */; };
+		04D2A7101D6D9B4200AFA977 /* SFDetailContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A70F1D6D9B4200AFA977 /* SFDetailContentView.m */; };
+		04D2A7131D6D9DD600AFA977 /* SFDetailListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A7121D6D9DD600AFA977 /* SFDetailListItem.m */; };
+		04D2A7161D6DEC7200AFA977 /* SFDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A7151D6DEC7200AFA977 /* SFDetailBottomView.m */; };
+		04D2A7191D6DF2F500AFA977 /* SFBottomButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D2A7181D6DF2F500AFA977 /* SFBottomButtonView.m */; };
 		04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7387F1D656308007B44A8 /* SFRegisterViewController.m */; };
 		04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738881D65B8EB007B44A8 /* SFMyHeaderView.m */; };
 		04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7388B1D65BBE1007B44A8 /* SFMyTableView.m */; };
@@ -102,6 +107,16 @@
 		04CA49EE1D64BC2E004C2D7B /* SFMyMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyMessage.h; sourceTree = "<group>"; };
 		04CA49EF1D64BC2E004C2D7B /* SFMyMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFMyMessage.m; sourceTree = "<group>"; };
 		04CA49F11D6541F4004C2D7B /* SFE.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFE.pch; sourceTree = "<group>"; };
+		04D2A70B1D6D8DF100AFA977 /* SFDetailTitleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailTitleItem.h; sourceTree = "<group>"; };
+		04D2A70C1D6D8DF100AFA977 /* SFDetailTitleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailTitleItem.m; sourceTree = "<group>"; };
+		04D2A70E1D6D9B4200AFA977 /* SFDetailContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailContentView.h; sourceTree = "<group>"; };
+		04D2A70F1D6D9B4200AFA977 /* SFDetailContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailContentView.m; sourceTree = "<group>"; };
+		04D2A7111D6D9DD600AFA977 /* SFDetailListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailListItem.h; sourceTree = "<group>"; };
+		04D2A7121D6D9DD600AFA977 /* SFDetailListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailListItem.m; sourceTree = "<group>"; };
+		04D2A7141D6DEC7200AFA977 /* SFDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFDetailBottomView.h; sourceTree = "<group>"; };
+		04D2A7151D6DEC7200AFA977 /* SFDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFDetailBottomView.m; sourceTree = "<group>"; };
+		04D2A7171D6DF2F500AFA977 /* SFBottomButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBottomButtonView.h; sourceTree = "<group>"; };
+		04D2A7181D6DF2F500AFA977 /* SFBottomButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBottomButtonView.m; sourceTree = "<group>"; };
 		04E7387E1D656308007B44A8 /* SFRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRegisterViewController.h; sourceTree = "<group>"; };
 		04E7387F1D656308007B44A8 /* SFRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRegisterViewController.m; sourceTree = "<group>"; };
 		04E738871D65B8EB007B44A8 /* SFMyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyHeaderView.h; sourceTree = "<group>"; };
@@ -203,6 +218,10 @@
 			children = (
 				04A862BB1D6C722B003D66C3 /* SFDetailTopImageItem.h */,
 				04A862BC1D6C722B003D66C3 /* SFDetailTopImageItem.m */,
+				04D2A70B1D6D8DF100AFA977 /* SFDetailTitleItem.h */,
+				04D2A70C1D6D8DF100AFA977 /* SFDetailTitleItem.m */,
+				04D2A7111D6D9DD600AFA977 /* SFDetailListItem.h */,
+				04D2A7121D6D9DD600AFA977 /* SFDetailListItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +233,12 @@
 				04A862B91D6C6D3B003D66C3 /* SFDetailTopImage.m */,
 				04A862BE1D6C8BF3003D66C3 /* SFDetailTitleView.h */,
 				04A862BF1D6C8BF3003D66C3 /* SFDetailTitleView.m */,
+				04D2A70E1D6D9B4200AFA977 /* SFDetailContentView.h */,
+				04D2A70F1D6D9B4200AFA977 /* SFDetailContentView.m */,
+				04D2A7141D6DEC7200AFA977 /* SFDetailBottomView.h */,
+				04D2A7151D6DEC7200AFA977 /* SFDetailBottomView.m */,
+				04D2A7171D6DF2F500AFA977 /* SFBottomButtonView.h */,
+				04D2A7181D6DF2F500AFA977 /* SFBottomButtonView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -711,12 +736,16 @@
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
 				04A862A71D6B56D6003D66C3 /* SFNewDealItem.m in Sources */,
+				04D2A7161D6DEC7200AFA977 /* SFDetailBottomView.m in Sources */,
 				04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */,
 				04E738A11D675E95007B44A8 /* UIImageView+SFSDWebImage.m in Sources */,
+				04D2A7191D6DF2F500AFA977 /* SFBottomButtonView.m in Sources */,
 				04E738921D65EC2E007B44A8 /* SFThirdLoginView.m in Sources */,
 				04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */,
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
 				04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */,
+				04D2A70D1D6D8DF100AFA977 /* SFDetailTitleItem.m in Sources */,
+				04D2A7101D6D9B4200AFA977 /* SFDetailContentView.m in Sources */,
 				04CA49DA1D645907004C2D7B /* SFMyViewController.m in Sources */,
 				04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */,
 				04E738AB1D689EED007B44A8 /* SFBaseViewController.m in Sources */,
@@ -728,6 +757,7 @@
 				04A862AD1D6BF6E3003D66C3 /* SFNewDealCell.m in Sources */,
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
 				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
+				04D2A7131D6D9DD600AFA977 /* SFDetailListItem.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
 				04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */,
 				04A862A11D6B2ED0003D66C3 /* SFTwoButtonView.m in Sources */,

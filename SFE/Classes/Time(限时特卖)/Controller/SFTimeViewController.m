@@ -130,7 +130,7 @@
         
         self.mainScrollView.contentSize = CGSizeMake(0, self.newsArray.count * 170 + 280);
         [self.newsTableView reloadData];
-        SFLog(@"item%@", self.newsArray);
+//        SFLog(@"item%@", self.newsArray);
     } failure:^(NSError *error) {
         
     }];
@@ -150,7 +150,7 @@
 - (void)requestHttpBrandDeal {
 
     [self getWithPath:@"appActivity/appActivityList.do" params:nil success:^(id json) {
-        SFLog(@"brand%@", json);
+//        SFLog(@"brand%@", json);
         self.brandArray = [NSArray yy_modelArrayWithClass:[SFBrandDealItem class] json:json];
         
         //  数据赋值
