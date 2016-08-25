@@ -57,7 +57,7 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
 
     [self postWithPath:@"appSearch/searchList.do" params:@{@"search" : searchBar.text, @"OrderName" : @"host", @"OrderType" : @"ASC" } success:^(id json) {
-//        SFLog(@"searchBar%@",json);
+        SFLog(@"searchBar%@",json);
         NSArray *goodListArray = [NSArray yy_modelArrayWithClass:[SFGoodListItem class] json:json];
         
         SFGoodsListViewController *goodList = [[SFGoodsListViewController alloc] init];
@@ -66,6 +66,7 @@
         
         //解决页面跳转时闪烁问题，如果键盘存在的话，页面跳转的动画会出现两次的push，但nav的子视图中并没有出现多余的viewcontroller
         [searchBar resignFirstResponder];
+        
         [self.navigationController pushViewController:goodList animated:YES];
         
         

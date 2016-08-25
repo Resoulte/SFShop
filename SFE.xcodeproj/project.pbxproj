@@ -43,6 +43,7 @@
 		04DE56EE1D6EA34F003F44F1 /* SFGoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE56ED1D6EA34F003F44F1 /* SFGoodsListViewController.m */; };
 		04DE56F11D6EAD90003F44F1 /* SFGoodListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE56F01D6EAD90003F44F1 /* SFGoodListItem.m */; };
 		04DE56F41D6EB009003F44F1 /* SFGoodListNavButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE56F31D6EB008003F44F1 /* SFGoodListNavButton.m */; };
+		04DE56FA1D6ECC13003F44F1 /* SFGoodsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE56F91D6ECC13003F44F1 /* SFGoodsListCell.m */; };
 		04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7387F1D656308007B44A8 /* SFRegisterViewController.m */; };
 		04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738881D65B8EB007B44A8 /* SFMyHeaderView.m */; };
 		04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E7388B1D65BBE1007B44A8 /* SFMyTableView.m */; };
@@ -129,6 +130,8 @@
 		04DE56F01D6EAD90003F44F1 /* SFGoodListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGoodListItem.m; sourceTree = "<group>"; };
 		04DE56F21D6EB008003F44F1 /* SFGoodListNavButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGoodListNavButton.h; sourceTree = "<group>"; };
 		04DE56F31D6EB008003F44F1 /* SFGoodListNavButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGoodListNavButton.m; sourceTree = "<group>"; };
+		04DE56F81D6ECC13003F44F1 /* SFGoodsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGoodsListCell.h; sourceTree = "<group>"; };
+		04DE56F91D6ECC13003F44F1 /* SFGoodsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGoodsListCell.m; sourceTree = "<group>"; };
 		04E7387E1D656308007B44A8 /* SFRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRegisterViewController.h; sourceTree = "<group>"; };
 		04E7387F1D656308007B44A8 /* SFRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRegisterViewController.m; sourceTree = "<group>"; };
 		04E738871D65B8EB007B44A8 /* SFMyHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFMyHeaderView.h; sourceTree = "<group>"; };
@@ -629,6 +632,8 @@
 			children = (
 				04DE56F21D6EB008003F44F1 /* SFGoodListNavButton.h */,
 				04DE56F31D6EB008003F44F1 /* SFGoodListNavButton.m */,
+				04DE56F81D6ECC13003F44F1 /* SFGoodsListCell.h */,
+				04DE56F91D6ECC13003F44F1 /* SFGoodsListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -819,6 +824,7 @@
 				04A862A41D6B3A8C003D66C3 /* SFDealTableView.m in Sources */,
 				04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */,
 				04CA49DB1D645907004C2D7B /* AppDelegate.m in Sources */,
+				04DE56FA1D6ECC13003F44F1 /* SFGoodsListCell.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
 				04A862A71D6B56D6003D66C3 /* SFNewDealItem.m in Sources */,
