@@ -21,6 +21,7 @@
 }
 
 - (void)setContentItemArray:(NSArray *)contentItemArray {
+    
     _contentItemArray = contentItemArray;
     CGFloat textHeight = 0;
     for (SFDetailListItem *item in contentItemArray) {
@@ -35,7 +36,9 @@
         contentLable.text = item.Value;
         contentLable.numberOfLines = 0;
         [self addSubview:contentLable];
+        
         textHeight = textHeight + height + 15;
+        
     }
     
     if (_returnContentHeightBlock) {

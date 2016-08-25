@@ -12,6 +12,7 @@
 #import "SFNewDealItem.h"
 #import "SFBrandDealItem.h"
 #import "SFDetailViewController.h"
+#import "SFSearchViewController.h"
 
 
 
@@ -57,11 +58,23 @@
     [self.mainScrollView addSubview:self.twoBtnView];
     
     
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 35, 35);
+    [leftBtn setImage:[UIImage imageNamed:@"限时特卖界面搜索按钮"] forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    [leftBtn addTarget:self action:@selector(pushSearchController) forControlEvents:UIControlEventTouchUpInside];
+    
     [self requestHttpHeadImage];
     [self requestHttpNewsDeal];
     [self requestHttpBrandDeal];
     
     
+}
+
+- (void)pushSearchController {
+
+    SFSearchViewController *search = [[SFSearchViewController alloc] init];
+    [self.navigationController pushViewController:search animated:YES];
 }
 
 
