@@ -19,7 +19,7 @@
 /**底部结算的view*/
 @property (strong, nonatomic) SFPriceView *priceView;
 /**商品列表数组*/
-@property (strong, nonatomic) NSArray *goodListArray;
+@property (strong, nonatomic) NSMutableArray *goodListArray;
 @end
 
 @implementation SFBuyViewController
@@ -75,8 +75,10 @@
                                  };
         [self getWithPath:@"appShopCart/appCartGoodsList.do" params:params success:^(id json) {
             
-//            self.goodListArray = [NSMutableArray array];
-            self.goodListArray = [NSArray yy_modelArrayWithClass:[SFBuyShopItem class] json:json];
+            self.goodListArray = [NSMutableArray array];
+            NSArray *dataArray = [NSArray yy_modelArrayWithClass:[SFBuyShopItem class] json:json];
+            
+            self.goodListArray = [NSMutableArray arrayWithArray:dataArray];
             
             self.buyCarListView.dataArray = self.goodListArray;
             
@@ -110,6 +112,12 @@
 - (SFPriceView *)priceView {
     if (!_priceView) {
         _priceView = [[SFPriceView alloc] init];
+        
+        __weak typeof(self) weakSelf = self;
+        _priceView.rightBuyBlock = ^ {
+            // 去支付
+            [weakSelf rightToBuy];
+        };
     }
     
     return _priceView;
@@ -175,4 +183,20 @@
     }];
     
 }
+
+/*
+ URL:h"p://123.57.141.249:8080/beautalk/appOrder/gotoInsert.do 传入数据:
+ 商品标识:Goods
+ 【格式:商品数量,商品Id,商品重量#商品数量,商品Id,商品重量】 如:h"p://123.57.141.249:8080/beautalk/appOrder/gotoInsert.do?
+ Goods=3,0370d7d8-4698-46c5-b293-8521ab8d5ff3,6#1,0425fde8-4f49-4f2e-a9d3-58dc4111952d,7
+ */
+/**立即去支付*/
+- (void)rightToBuy {
+    
+}
+
+//- (NSDictionary *)params {
+//
+//    
+//}
 @end

@@ -11,6 +11,11 @@
 		0411D5541D768A2A0052A5D7 /* SFBuyCarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5531D768A2A0052A5D7 /* SFBuyCarListView.m */; };
 		0411D5571D76A34E0052A5D7 /* SFBuyShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5561D76A34E0052A5D7 /* SFBuyShopCell.m */; };
 		0411D55A1D76F6360052A5D7 /* SFPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5591D76F6360052A5D7 /* SFPriceView.m */; };
+		0411D5741D77251B0052A5D7 /* SFRightBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5711D77251B0052A5D7 /* SFRightBuyViewController.m */; };
+		0411D5771D7725590052A5D7 /* SFAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5761D7725590052A5D7 /* SFAddressView.m */; };
+		0411D57D1D7725AB0052A5D7 /* SFRightBuyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D57C1D7725AB0052A5D7 /* SFRightBuyItem.m */; };
+		0411D5801D7725C80052A5D7 /* SFGoodsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D57F1D7725C80052A5D7 /* SFGoodsListItem.m */; };
+		0411D5831D7725DD0052A5D7 /* SFPayListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5821D7725DD0052A5D7 /* SFPayListItem.m */; };
 		04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862941D697E34003D66C3 /* SFLoginViewController.m */; };
 		04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862971D697F38003D66C3 /* SFLoginInputView.m */; };
 		04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */; };
@@ -71,6 +76,16 @@
 		0411D5561D76A34E0052A5D7 /* SFBuyShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBuyShopCell.m; sourceTree = "<group>"; };
 		0411D5581D76F6360052A5D7 /* SFPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPriceView.h; sourceTree = "<group>"; };
 		0411D5591D76F6360052A5D7 /* SFPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFPriceView.m; sourceTree = "<group>"; };
+		0411D5701D77251B0052A5D7 /* SFRightBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRightBuyViewController.h; sourceTree = "<group>"; };
+		0411D5711D77251B0052A5D7 /* SFRightBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRightBuyViewController.m; sourceTree = "<group>"; };
+		0411D5751D7725590052A5D7 /* SFAddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAddressView.h; sourceTree = "<group>"; };
+		0411D5761D7725590052A5D7 /* SFAddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAddressView.m; sourceTree = "<group>"; };
+		0411D57B1D7725AB0052A5D7 /* SFRightBuyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRightBuyItem.h; sourceTree = "<group>"; };
+		0411D57C1D7725AB0052A5D7 /* SFRightBuyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRightBuyItem.m; sourceTree = "<group>"; };
+		0411D57E1D7725C80052A5D7 /* SFGoodsListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFGoodsListItem.h; sourceTree = "<group>"; };
+		0411D57F1D7725C80052A5D7 /* SFGoodsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGoodsListItem.m; sourceTree = "<group>"; };
+		0411D5811D7725DD0052A5D7 /* SFPayListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPayListItem.h; sourceTree = "<group>"; };
+		0411D5821D7725DD0052A5D7 /* SFPayListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFPayListItem.m; sourceTree = "<group>"; };
 		04A862931D697E34003D66C3 /* SFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginViewController.h; sourceTree = "<group>"; };
 		04A862941D697E34003D66C3 /* SFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginViewController.m; sourceTree = "<group>"; };
 		04A862961D697F38003D66C3 /* SFLoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginInputView.h; sourceTree = "<group>"; };
@@ -183,6 +198,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0411D56E1D77251B0052A5D7 /* RightBuy(立即购买) */ = {
+			isa = PBXGroup;
+			children = (
+				0411D56F1D77251B0052A5D7 /* Controller */,
+				0411D5721D77251B0052A5D7 /* Model */,
+				0411D5731D77251B0052A5D7 /* View */,
+			);
+			path = "RightBuy(立即购买)";
+			sourceTree = "<group>";
+		};
+		0411D56F1D77251B0052A5D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0411D5701D77251B0052A5D7 /* SFRightBuyViewController.h */,
+				0411D5711D77251B0052A5D7 /* SFRightBuyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0411D5721D77251B0052A5D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0411D57B1D7725AB0052A5D7 /* SFRightBuyItem.h */,
+				0411D57C1D7725AB0052A5D7 /* SFRightBuyItem.m */,
+				0411D57E1D7725C80052A5D7 /* SFGoodsListItem.h */,
+				0411D57F1D7725C80052A5D7 /* SFGoodsListItem.m */,
+				0411D5811D7725DD0052A5D7 /* SFPayListItem.h */,
+				0411D5821D7725DD0052A5D7 /* SFPayListItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0411D5731D77251B0052A5D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0411D5751D7725590052A5D7 /* SFAddressView.h */,
+				0411D5761D7725590052A5D7 /* SFAddressView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		04A8628F1D697DCF003D66C3 /* Login登录 */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +368,7 @@
 		04CA49B51D645907004C2D7B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0411D56E1D77251B0052A5D7 /* RightBuy(立即购买) */,
 				04CA49D11D645907004C2D7B /* Time(限时特卖) */,
 				04DE56E81D6EA326003F44F1 /* GoodsList(商品列表) */,
 				04DE56E11D6E98D7003F44F1 /* Search(搜索) */,
@@ -859,6 +916,7 @@
 				04E738921D65EC2E007B44A8 /* SFThirdLoginView.m in Sources */,
 				04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */,
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
+				0411D5801D7725C80052A5D7 /* SFGoodsListItem.m in Sources */,
 				04CA49E91D64AB2F004C2D7B /* SFMyTableViewCell.m in Sources */,
 				04D2A70D1D6D8DF100AFA977 /* SFDetailTitleItem.m in Sources */,
 				04D2A7101D6D9B4200AFA977 /* SFDetailContentView.m in Sources */,
@@ -875,15 +933,19 @@
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
 				04DE56E71D6E992A003F44F1 /* SFSearchViewController.m in Sources */,
 				04DE56EE1D6EA34F003F44F1 /* SFGoodsListViewController.m in Sources */,
+				0411D5771D7725590052A5D7 /* SFAddressView.m in Sources */,
 				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
 				04D2A7131D6D9DD600AFA977 /* SFDetailListItem.m in Sources */,
+				0411D5831D7725DD0052A5D7 /* SFPayListItem.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
 				04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */,
 				04A862A11D6B2ED0003D66C3 /* SFTwoButtonView.m in Sources */,
 				04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */,
+				0411D57D1D7725AB0052A5D7 /* SFRightBuyItem.m in Sources */,
 				04A862AA1D6B56F4003D66C3 /* SFBrandDealItem.m in Sources */,
 				04E7388C1D65BBE1007B44A8 /* SFMyTableView.m in Sources */,
 				04A862B71D6C4166003D66C3 /* SFDetailViewController.m in Sources */,
+				0411D5741D77251B0052A5D7 /* SFRightBuyViewController.m in Sources */,
 				04A862BD1D6C722B003D66C3 /* SFDetailTopImageItem.m in Sources */,
 				04CA49DF1D647F4B004C2D7B /* SFTabBarController.m in Sources */,
 			);

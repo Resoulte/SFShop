@@ -83,7 +83,9 @@
 
 - (void)goPayBtnMethod {
 
-    
+    if (_rightBuyBlock) {
+        _rightBuyBlock();
+    }
 }
 
 

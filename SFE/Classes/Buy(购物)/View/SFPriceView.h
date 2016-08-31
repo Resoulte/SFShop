@@ -13,5 +13,6 @@
 /**商品价格*/
 @property (strong, nonatomic)   UILabel *priceLabel;
 
-
+/**立即支付的Block*/
+@property (strong, nonatomic) void(^rightBuyBlock)();
 @end
