@@ -8,6 +8,7 @@
 
 #import "SFBuyCarListView.h"
 #import "SFBuyShopCell.h"
+#import "SFBuyShopItem.h"
 
 @interface  SFBuyCarListView () <UITableViewDelegate, UITableViewDataSource>
 
@@ -46,7 +47,67 @@
     
     cell.shopItem = self.dataArray[indexPath.row];
     
+    cell.tag = 1000 + indexPath.row;
+    SFLog(@"%ld", cell.tag);
+    
+    [cell.addButton addTarget:self action:@selector(addButtonMethod:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.cutButton addTarget:self action:@selector(cutButtonMethod:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.isSelectBtn addTarget:self action:@selector(selectBtnMethod:) forControlEvents:UIControlEventTouchUpInside];
+
+    
     return cell;
+    
+}
+
+#pragma mark - 点击事件 
+- (void)addButtonMethod:(UIButton *)addBtn {
+    
+    
+//    UIView *cell = [addBtn superview];
+    // 因为我加到了cell的contentView上面
+    UIView *cell = [[addBtn superview] superview];
+    SFBuyShopItem *shopItem = self.dataArray[cell.tag - 1000];
+    [shopItem setGoodsCount:shopItem.GoodsCount + 1];
+    
+    [self changeDataMethod];
+
+    
+}
+
+- (void)cutButtonMethod:(UIButton *)cutBtn {
+    
+    UIView *cell = [[cutBtn superview] superview];
+    SFBuyShopItem *shopItem = self.dataArray[cell.tag - 1000];
+
+    if (shopItem.GoodsCount > 1) {
+        [shopItem setGoodsCount:shopItem.GoodsCount - 1];
+    }
+    [self changeDataMethod];
+    
+}
+
+- (void)selectBtnMethod:(UIButton *)selectBtn {
+    UIView *cell = [[selectBtn superview] superview];
+    SFLog(@"%@", cell);
+    SFBuyShopItem *shopItem = self.dataArray[cell.tag - 1000];
+    if (selectBtn.selected) {
+        selectBtn.selected = NO;
+        [shopItem setIsSelected:NO];
+    } else {
+        selectBtn.selected = YES;
+        [shopItem setIsSelected:YES];
+    }
+    
+    // 修改controller中的数据
+    [self changeDataMethod];
+}
+
+- (void)changeDataMethod {
+    
+    [self reloadData];
+    if (_changeDataBlock) {
+        _changeDataBlock();
+    }
     
 }
 
@@ -54,6 +115,12 @@
 - (void)setDataArray:(NSArray *)dataArray {
 
     _dataArray = dataArray;
+    
+    for (SFBuyShopItem *shopItem in self.dataArray) {
+        [shopItem setIsSelected:YES];
+    }
+    
+    [self reloadData];
 }
 
 

@@ -104,6 +104,7 @@
     _titleLabel.text = shopItem.GoodsTitle;
     _priceLabel.text = [NSString stringWithFormat:@"%.2lf",shopItem.Price];
     _goodsNumLabel.text = [NSString stringWithFormat:@"%li",shopItem.GoodsCount];
+    
     _isSelectBtn.selected = shopItem.isSelected;
 }
 
@@ -165,6 +166,7 @@
         _isSelectBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_isSelectBtn setImage:[UIImage imageNamed:@"购物车界面商品选中对号按钮"] forState:(UIControlStateSelected)];
         [_isSelectBtn setImage:[UIImage imageNamed:@"购物车界面商品未选中"] forState:(UIControlStateNormal)];
+//        _isSelectBtn.backgroundColor = [UIColor redColor];
     }
     return _isSelectBtn;
 }

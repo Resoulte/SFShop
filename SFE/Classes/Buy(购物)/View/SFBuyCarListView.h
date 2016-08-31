@@ -11,9 +11,10 @@
 
 @interface SFBuyCarListView : UITableView
 
-/**接收数据*/
+/**接收购物车请求到的数据*/
 @property (strong, nonatomic) NSArray *dataArray;
 
-
+/**修改控制器中的数据*/
+@property (copy, nonatomic) void(^changeDataBlock)();
 
 @end

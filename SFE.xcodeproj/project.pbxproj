@@ -10,6 +10,7 @@
 		0411D5511D76878E0052A5D7 /* SFBuyShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5501D76878E0052A5D7 /* SFBuyShopItem.m */; };
 		0411D5541D768A2A0052A5D7 /* SFBuyCarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5531D768A2A0052A5D7 /* SFBuyCarListView.m */; };
 		0411D5571D76A34E0052A5D7 /* SFBuyShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5561D76A34E0052A5D7 /* SFBuyShopCell.m */; };
+		0411D55A1D76F6360052A5D7 /* SFPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5591D76F6360052A5D7 /* SFPriceView.m */; };
 		04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862941D697E34003D66C3 /* SFLoginViewController.m */; };
 		04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862971D697F38003D66C3 /* SFLoginInputView.m */; };
 		04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */; };
@@ -68,6 +69,8 @@
 		0411D5531D768A2A0052A5D7 /* SFBuyCarListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBuyCarListView.m; sourceTree = "<group>"; };
 		0411D5551D76A34E0052A5D7 /* SFBuyShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBuyShopCell.h; sourceTree = "<group>"; };
 		0411D5561D76A34E0052A5D7 /* SFBuyShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBuyShopCell.m; sourceTree = "<group>"; };
+		0411D5581D76F6360052A5D7 /* SFPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPriceView.h; sourceTree = "<group>"; };
+		0411D5591D76F6360052A5D7 /* SFPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFPriceView.m; sourceTree = "<group>"; };
 		04A862931D697E34003D66C3 /* SFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginViewController.h; sourceTree = "<group>"; };
 		04A862941D697E34003D66C3 /* SFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginViewController.m; sourceTree = "<group>"; };
 		04A862961D697F38003D66C3 /* SFLoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginInputView.h; sourceTree = "<group>"; };
@@ -356,6 +359,8 @@
 				0411D5531D768A2A0052A5D7 /* SFBuyCarListView.m */,
 				0411D5551D76A34E0052A5D7 /* SFBuyShopCell.h */,
 				0411D5561D76A34E0052A5D7 /* SFBuyShopCell.m */,
+				0411D5581D76F6360052A5D7 /* SFPriceView.h */,
+				0411D5591D76F6360052A5D7 /* SFPriceView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,6 +847,7 @@
 				04DE56FA1D6ECC13003F44F1 /* SFGoodsListCell.m in Sources */,
 				0411D5541D768A2A0052A5D7 /* SFBuyCarListView.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
+				0411D55A1D76F6360052A5D7 /* SFPriceView.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
 				04A862A71D6B56D6003D66C3 /* SFNewDealItem.m in Sources */,
 				04D2A7161D6DEC7200AFA977 /* SFDetailBottomView.m in Sources */,
