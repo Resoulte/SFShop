@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SFBuyShopItem.h"
 
 @interface SFBuyCarListView : UITableView
+
+/**接收数据*/
+@property (strong, nonatomic) NSArray *dataArray;
+
+
 
 @end

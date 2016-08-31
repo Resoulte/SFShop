@@ -9,12 +9,14 @@
 #import "SFBuyViewController.h"
 #import "SFLoginViewController.h"
 #import "SFBuyCarListView.h"
+#import "SFBuyShopItem.h"
 
 @interface SFBuyViewController ()
 
 /**商品展示的TableView*/
 @property (strong, nonatomic) SFBuyCarListView *buyCarListView;
-
+/**商品列表数组*/
+@property (strong, nonatomic) NSArray *goodListArray;
 @end
 
 @implementation SFBuyViewController
@@ -22,7 +24,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view addSubview:self.buyCarListView];
+    
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self buyRequestHttp];
+    
 }
 
 /*
@@ -50,8 +60,16 @@
                                  @"MemberId" : userDict[@"MemberId"]
                                  };
         [self getWithPath:@"appShopCart/appCartGoodsList.do" params:params success:^(id json) {
-//            SFLog(@"%@", json);
-            [json writeToFile:@"/Users/mac/Desktop/json.plist" atomically:YES];
+            
+//            self.goodListArray = [NSMutableArray array];
+            self.goodListArray = [NSArray yy_modelArrayWithClass:[SFBuyShopItem class] json:json];
+            
+            self.buyCarListView.dataArray = self.goodListArray;
+            
+            [self.buyCarListView reloadData];
+            
+            //            SFLog(@"%@", json);
+//            [json writeToFile:@"/Users/mac/Desktop/json.plist" atomically:YES];
             
         } failure:^(NSError *error) {
             
@@ -62,7 +80,7 @@
 #pragma mark - getter and getter 
 - (SFBuyCarListView *)buyCarListView {
     if (!_buyCarListView) {
-        _buyCarListView = [[SFBuyCarListView alloc] initWithFrame:CGRectMake(0, 64, SFScreen.width, SFScreen.height-100) style:UITableViewStylePlain];
+        _buyCarListView = [[SFBuyCarListView alloc] initWithFrame:CGRectMake(0, 30, SFScreen.width, SFScreen.height) style:UITableViewStylePlain];
         
     }
     return _buyCarListView;

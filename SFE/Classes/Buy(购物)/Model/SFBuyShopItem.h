@@ -10,14 +10,20 @@
 
 @interface SFBuyShopItem : NSObject
 
-/**商品名字*/
-@property (copy, nonatomic) NSString *Abbreviation;
-/**价格*/
-@property (copy, nonatomic) NSString *Price;
-/**商品图片*/
+/**商品ID*/
+@property (copy, nonatomic) NSString *GoodsId;
+/**商品缩略图*/
 @property (copy, nonatomic) NSString *ImgView;
-/**商品个数*/
-@property (copy, nonatomic) NSString *GoodsCount;
+/**商品标题*/
+@property (copy, nonatomic) NSString *GoodsTitle;
+/**商品数量*/
+@property (assign, nonatomic) NSInteger GoodsCount;
+/**价格*/
+@property (assign, nonatomic) CGFloat Price;
+/**商品标记*/
+@property (copy, nonatomic) NSString *UUID;
+/**商品重量*/
+@property (assign, nonatomic) CGFloat Weight;
 
 // 自己添加的，用来判断是否选中该商品
 /**判断是否选中该商品*/
