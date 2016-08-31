@@ -59,6 +59,27 @@
     
 }
 
+
+/**实现删除功能*/
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewRowAction *del = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"删除" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        SFBuyShopItem *shopItem = self.dataArray[indexPath.row];
+        shopItem.GoodsCount = 0;
+        [self changeDataMethod];
+        
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+    }];
+    
+    return @[del];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return YES;
+}
 #pragma mark - 点击事件 
 - (void)addButtonMethod:(UIButton *)addBtn {
     
@@ -112,7 +133,7 @@
 }
 
 #pragma mark - setter and getter
-- (void)setDataArray:(NSArray *)dataArray {
+- (void)setDataArray:(NSMutableArray *)dataArray {
 
     _dataArray = dataArray;
     
