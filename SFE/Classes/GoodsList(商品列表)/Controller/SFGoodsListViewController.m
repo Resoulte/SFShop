@@ -31,29 +31,38 @@ static NSString *ID = @"cell";
     [self.view addSubview:self.navButtonView];
 
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
-    flow.minimumLineSpacing = 10;
-    flow.minimumInteritemSpacing = 10;
-    flow.sectionInset =UIEdgeInsetsMake(5, 0, 5, 5);
-    flow.itemSize = CGSizeMake((SFScreen.width-5) / 2, 255);
+    flow.minimumLineSpacing = 5;
+    flow.minimumInteritemSpacing = 5;
+    flow.sectionInset =UIEdgeInsetsMake(0, 10, 10, 10);
+    NSInteger itemW = (SFScreen.width-10 * 3) / 2;
+    flow.itemSize = CGSizeMake(itemW, 255);
+ 
+
+    
+
     
     UICollectionView *listView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 30, SFScreen.width, SFScreen.height) collectionViewLayout:flow];
     listView.backgroundColor = [UIColor whiteColor];
     listView.dataSource = self;
     [self.view addSubview:listView];
     
-    [listView registerClass:[SFGoodsListCell class] forCellWithReuseIdentifier:ID];
+    [listView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ID];
 }
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return self.searchList.count;
+//    return self.searchList.count;
+    return 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    SFGoodsListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    cell.listItem = self.searchList[indexPath.row];
+//    SFGoodsListCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+//    cell.listItem = self.searchList[indexPath.row];
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor redColor];
     
     return cell;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "SFDetailViewController.h"
+#import "SFLoginViewController.h"
 #import "SFDetailTopImage.h"
 #import "SFDetailTopImageItem.h"
 #import "SFDetailTitleItem.h"
@@ -15,6 +16,7 @@
 #import "SFDetailBottomView.h"
 #import "SFDetailContentView.h"
 #import "SFBottomButtonView.h"
+#import "SFGoodListItem.h"
 
 
 @interface SFDetailViewController ()
@@ -139,6 +141,48 @@
     }];
 }
 
+/*
+ URL:h"p://123.57.141.249:8080/beautalk/appShopCart/insert.do 
+ 传入数据:
+ 参数标记:
+ 会员登录名 :MemberId
+ 美食ID : GoodsId 
+ 返回参数:Map<String,Object> 结果:Result【"success" or "error"】
+
+ */
+#pragma mark - addBuyShopRequestHttp网络请求
+- (void)addBuyShopRequestHttp {
+    
+    NSDictionary *userDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"isLogin"];
+    
+    if (!userDict[@"MemberId"]) {
+        // 没有登录，跳转到登录界面
+        [SVProgressHUD showWithStatus:@"请先登录..."];
+        SFLoginViewController *login = [[SFLoginViewController alloc] init];
+        [self.navigationController pushViewController:login animated:YES];
+        [SVProgressHUD dismiss];
+        
+    } else {
+        
+        NSDictionary *params = @{
+                                 @"MemberId" : userDict[@"MemberId"],
+                                 @"GoodsId" : self.GoodsID
+                                 };
+        [self getWithPath:@"appShopCart/insert.do" params:params success:^(id json) {
+            SFLog(@"%@", json);
+            if ([json[@"result"] isEqualToString:@"success"]) {
+                [SVProgressHUD showSuccessWithStatus:@"加入成功"];
+            } else
+                [SVProgressHUD showErrorWithStatus:@"加入失败"];
+
+        } failure:^(NSError *error) {
+            
+        }];
+    }
+
+    
+}
+
 #pragma mark - setter and getter
 - (UIScrollView *)mainScrollView {
 
@@ -204,6 +248,8 @@
         }];
             weakSelf.scrollHeight += height;
         };
+        
+        
     }
     return _bottomView;
 }
@@ -217,6 +263,12 @@
 
     if (!_buttonView) {
         _buttonView  = [[SFBottomButtonView alloc] initWithFrame:CGRectMake(0, SFScreen.height-45, SFScreen.width, 45)];
+        
+        __weak typeof(self) weakSelf = self;
+        _buttonView.addBuyShopBlock = ^ {
+        
+            [weakSelf addBuyShopRequestHttp];
+        };
     }
     return _buttonView;
 }

@@ -18,6 +18,7 @@
 #import "SFHttpTools.h"
 #import <UIImageView+WebCache.h>
 #import "SDCycleScrollView.h"
+#import "SVProgressHUD.h"
 
 
 

@@ -10,4 +10,7 @@
 
 @interface SFBottomButtonView : UIView
 
+/**加入购物车的block*/
+@property (copy, nonatomic) void(^addBuyShopBlock)();
+
 @end

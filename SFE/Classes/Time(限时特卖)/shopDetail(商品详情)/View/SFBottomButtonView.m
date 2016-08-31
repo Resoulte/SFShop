@@ -80,6 +80,8 @@
     if (!_addShopBtn) {
         _addShopBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_addShopBtn setImage:[UIImage imageNamed:@"详情界面加入购物车按钮"] forState:(UIControlStateNormal)];
+        
+        [_addShopBtn addTarget:self action:@selector(addShopCar) forControlEvents:UIControlEventTouchUpInside];
     }
     return _addShopBtn;
 }
@@ -99,5 +101,12 @@
         _backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_back"]];
     }
     return _backImage;
+}
+
+- (void)addShopCar {
+    
+    if (_addBuyShopBlock) {
+        _addBuyShopBlock();
+    }
 }
 @end
