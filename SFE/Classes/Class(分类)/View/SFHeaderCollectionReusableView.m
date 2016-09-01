@@ -38,7 +38,7 @@
 
 #pragma mark - setter and getter
 - (void)setTitleLableText:(NSString *)titleLableText {
-    _titleLableText = titleLableText;
+//    _titleLableText = titleLableText;
     self.titleLabel.text = titleLableText;
 }
 - (UILabel *)titleLabel{

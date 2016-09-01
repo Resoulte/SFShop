@@ -49,7 +49,7 @@
 #pragma mark - setter and getter
 - (void)setEffectItem:(SFClassEffectItem *)effectItem {
 
-    _effectItem = effectItem;
+//    _effectItem = effectItem;
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:effectItem.ImgView]];
     self.iconTitle.text = effectItem.GoodsTypeName;
 }

@@ -19,6 +19,7 @@
 #import <UIImageView+WebCache.h>
 #import "SDCycleScrollView.h"
 #import "SVProgressHUD.h"
+#import <MJExtension.h>
 
 
 

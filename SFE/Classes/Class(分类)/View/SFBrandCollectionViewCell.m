@@ -39,7 +39,7 @@
 
 #pragma mark - setter and getter
 - (void)setBrandItem:(SFClassBrandItem *)brandItem {
-    _brandItem = brandItem;
+//    _brandItem = brandItem;
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:brandItem.ImgView]];
 }
 

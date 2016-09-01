@@ -41,6 +41,7 @@
     }];
 }
 
+#warning 内存问题
 /**分类的网络请求*/
 - (void)classRequestHttp {
 
@@ -49,27 +50,41 @@
     [self getWithPath:@"appBrandareatype/findBrandareatype.do" params:nil success:^(id json) {
 //        [json writeToFile:@"/Users/mac/Desktop/json1.plist" atomically:YES];
 //        SFLog(@"%@", json);
-        _classCollection.effectArray = [NSArray yy_modelArrayWithClass:[SFClassEffectItem class] json:json];
-        [self.classCollection reloadData];
+//
+//        NSArray *dataArray = [NSArray yy_modelArrayWithClass:[SFClassEffectItem class] json:json];
+        NSArray *dataArray = [SFClassEffectItem mj_objectArrayWithKeyValuesArray:json];
+        _classCollection.effectArray = dataArray;
+        SFLog(@"effectArray:%@", _classCollection.effectArray);
+//        [_classCollection reloadData];
     } failure:^(NSError *error) {
         
     }];
     
     // 经典品牌
     [self getWithPath:@"appBrandarea/asianBrand.do" params:nil success:^(id json) {
-        _classCollection.classicClassArray = [NSArray yy_modelArrayWithClass:[SFClassBrandItem class] json:json];
-        [self.classCollection reloadData];
+//        NSArray *dataArray = [NSArray yy_modelArrayWithClass:[SFClassBrandItem class] json:json];
+        
+        NSArray *dataArray = [SFClassBrandItem mj_objectArrayWithKeyValuesArray:json];
+        _classCollection.classicClassArray = dataArray;
+        SFLog(@"classicClassArray:%@", _classCollection.classicClassArray);
+//        [_classCollection reloadData];
     } failure:^(NSError *error) {
         
     }];
     
     // 推荐品牌
     [self getWithPath:@"appBrandareanew/findBrandareanew.do" params:nil success:^(id json) {
-         _classCollection.recommendClassArray = [NSArray yy_modelArrayWithClass:[SFClassBrandItem class] json:json];
-        [self.classCollection reloadData];
+//         NSArray *dataArray = [NSArray yy_modelArrayWithClass:[SFClassBrandItem class] json:json];
+        
+        NSArray *dataArray = [SFClassBrandItem mj_objectArrayWithKeyValuesArray:json];
+        _classCollection.recommendClassArray =  dataArray;
+        SFLog(@"recommendClassArray:%@", _classCollection.recommendClassArray);
+//        [_classCollection reloadData];
     } failure:^(NSError *error) {
         
     }];
+    
+    
 }
 
 #pragma mark - setter and getter
