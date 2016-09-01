@@ -91,6 +91,12 @@
 		04E738A11D675E95007B44A8 /* UIImageView+SFSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738A01D675E95007B44A8 /* UIImageView+SFSDWebImage.m */; };
 		04E738A51D68026C007B44A8 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738A41D68026C007B44A8 /* UIView+Toast.m */; };
 		04E738AB1D689EED007B44A8 /* SFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E738AA1D689EED007B44A8 /* SFBaseViewController.m */; };
+		04FDDFD41D78232400391989 /* SFEffectCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDDFD31D78232400391989 /* SFEffectCollectionViewCell.m */; };
+		04FDDFD71D78233500391989 /* SFBrandCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDDFD61D78233500391989 /* SFBrandCollectionViewCell.m */; };
+		04FDDFDA1D7827EF00391989 /* SFClassEffectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDDFD91D7827EF00391989 /* SFClassEffectItem.m */; };
+		04FDDFDD1D78280300391989 /* SFClassBrandItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDDFDC1D78280300391989 /* SFClassBrandItem.m */; };
+		04FDDFE01D78329A00391989 /* SFHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDDFDF1D78329A00391989 /* SFHeaderCollectionReusableView.m */; };
+		04FDDFE31D78469400391989 /* SFClassesCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FDDFE21D78469400391989 /* SFClassesCollection.m */; };
 		1B380EF8BBFFA8B371458106 /* libPods-SFE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C360D450EA8ACE99010644 /* libPods-SFE.a */; };
 /* End PBXBuildFile section */
 
@@ -323,6 +329,18 @@
 		04E738A41D68026C007B44A8 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		04E738A91D689EED007B44A8 /* SFBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBaseViewController.h; sourceTree = "<group>"; };
 		04E738AA1D689EED007B44A8 /* SFBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBaseViewController.m; sourceTree = "<group>"; };
+		04FDDFD21D78232400391989 /* SFEffectCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFEffectCollectionViewCell.h; sourceTree = "<group>"; };
+		04FDDFD31D78232400391989 /* SFEffectCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFEffectCollectionViewCell.m; sourceTree = "<group>"; };
+		04FDDFD51D78233500391989 /* SFBrandCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFBrandCollectionViewCell.h; sourceTree = "<group>"; };
+		04FDDFD61D78233500391989 /* SFBrandCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFBrandCollectionViewCell.m; sourceTree = "<group>"; };
+		04FDDFD81D7827EF00391989 /* SFClassEffectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFClassEffectItem.h; sourceTree = "<group>"; };
+		04FDDFD91D7827EF00391989 /* SFClassEffectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFClassEffectItem.m; sourceTree = "<group>"; };
+		04FDDFDB1D78280300391989 /* SFClassBrandItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFClassBrandItem.h; sourceTree = "<group>"; };
+		04FDDFDC1D78280300391989 /* SFClassBrandItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFClassBrandItem.m; sourceTree = "<group>"; };
+		04FDDFDE1D78329A00391989 /* SFHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		04FDDFDF1D78329A00391989 /* SFHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		04FDDFE11D78469400391989 /* SFClassesCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFClassesCollection.h; sourceTree = "<group>"; };
+		04FDDFE21D78469400391989 /* SFClassesCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFClassesCollection.m; sourceTree = "<group>"; };
 		11C72C6E2E6BCD3BFB13C672 /* Pods-SFE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.debug.xcconfig"; sourceTree = "<group>"; };
 		15C360D450EA8ACE99010644 /* libPods-SFE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SFE.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B710F88F05F440985EC7CFC1 /* Pods-SFE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFE/Pods-SFE.release.xcconfig"; sourceTree = "<group>"; };
@@ -725,6 +743,10 @@
 		04CA49C01D645907004C2D7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04FDDFD81D7827EF00391989 /* SFClassEffectItem.h */,
+				04FDDFD91D7827EF00391989 /* SFClassEffectItem.m */,
+				04FDDFDB1D78280300391989 /* SFClassBrandItem.h */,
+				04FDDFDC1D78280300391989 /* SFClassBrandItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -732,6 +754,14 @@
 		04CA49C11D645907004C2D7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04FDDFE11D78469400391989 /* SFClassesCollection.h */,
+				04FDDFE21D78469400391989 /* SFClassesCollection.m */,
+				04FDDFD21D78232400391989 /* SFEffectCollectionViewCell.h */,
+				04FDDFD31D78232400391989 /* SFEffectCollectionViewCell.m */,
+				04FDDFD51D78233500391989 /* SFBrandCollectionViewCell.h */,
+				04FDDFD61D78233500391989 /* SFBrandCollectionViewCell.m */,
+				04FDDFDE1D78329A00391989 /* SFHeaderCollectionReusableView.h */,
+				04FDDFDF1D78329A00391989 /* SFHeaderCollectionReusableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1194,6 +1224,7 @@
 				04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */,
 				0411D5F31D77DDE70052A5D7 /* NSDataEx.m in Sources */,
 				04A862B01D6C091C003D66C3 /* SFBrandDealCell.m in Sources */,
+				04FDDFE31D78469400391989 /* SFClassesCollection.m in Sources */,
 				0411D5891D77C3280052A5D7 /* SFRightTableViewCell.m in Sources */,
 				04DE56F41D6EB009003F44F1 /* SFGoodListNavButton.m in Sources */,
 				04A862A41D6B3A8C003D66C3 /* SFDealTableView.m in Sources */,
@@ -1202,6 +1233,7 @@
 				04DE56FA1D6ECC13003F44F1 /* SFGoodsListCell.m in Sources */,
 				0411D5541D768A2A0052A5D7 /* SFBuyCarListView.m in Sources */,
 				04CA49D71D645907004C2D7B /* SFBuyViewController.m in Sources */,
+				04FDDFD41D78232400391989 /* SFEffectCollectionViewCell.m in Sources */,
 				0411D55A1D76F6360052A5D7 /* SFPriceView.m in Sources */,
 				04CA49DC1D645907004C2D7B /* SFTimeViewController.m in Sources */,
 				04A862A71D6B56D6003D66C3 /* SFNewDealItem.m in Sources */,
@@ -1214,7 +1246,9 @@
 				04DE56F11D6EAD90003F44F1 /* SFGoodListItem.m in Sources */,
 				04E738A11D675E95007B44A8 /* UIImageView+SFSDWebImage.m in Sources */,
 				04D2A7191D6DF2F500AFA977 /* SFBottomButtonView.m in Sources */,
+				04FDDFD71D78233500391989 /* SFBrandCollectionViewCell.m in Sources */,
 				04E738921D65EC2E007B44A8 /* SFThirdLoginView.m in Sources */,
+				04FDDFDA1D7827EF00391989 /* SFClassEffectItem.m in Sources */,
 				04CA49E31D6486CE004C2D7B /* UIImage+SFImage.m in Sources */,
 				04CA49911D63FDA0004C2D7B /* main.m in Sources */,
 				0411D5801D7725C80052A5D7 /* SFGoodsListItem.m in Sources */,
@@ -1225,6 +1259,7 @@
 				04CA49F01D64BC2E004C2D7B /* SFMyMessage.m in Sources */,
 				0411D5511D76878E0052A5D7 /* SFBuyShopItem.m in Sources */,
 				0411D5F11D77DDE70052A5D7 /* DataVerifier.m in Sources */,
+				04FDDFE01D78329A00391989 /* SFHeaderCollectionReusableView.m in Sources */,
 				04E738AB1D689EED007B44A8 /* SFBaseViewController.m in Sources */,
 				04E738951D66A045007B44A8 /* SFNextView.m in Sources */,
 				04E738981D66A34E007B44A8 /* SFNextViewController.m in Sources */,
@@ -1243,6 +1278,7 @@
 				0411D5831D7725DD0052A5D7 /* SFPayListItem.m in Sources */,
 				0411D5EF1D77DDE70052A5D7 /* base64.m in Sources */,
 				0411D5EE1D77DDE70052A5D7 /* Order.m in Sources */,
+				04FDDFDD1D78280300391989 /* SFClassBrandItem.m in Sources */,
 				0411D5F51D77DDE70052A5D7 /* RSADataSigner.m in Sources */,
 				04E738801D656308007B44A8 /* SFRegisterViewController.m in Sources */,
 				04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */,
