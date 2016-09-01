@@ -11,6 +11,8 @@
 #import "SFBuyCarListView.h"
 #import "SFBuyShopItem.h"
 #import "SFPriceView.h"
+#import "SFRightBuyViewController.h"
+#import "SFRightBuyItem.h"
 
 @interface SFBuyViewController ()
 
@@ -193,10 +195,33 @@
 /**立即去支付*/
 - (void)rightToBuy {
     
+    [self getWithPath:@"appOrder/gotoInsert.do" params:[self params] success:^(id json) {
+   
+        SFRightBuyItem *rightbuyItem = [SFRightBuyItem yy_modelWithJSON:json];
+        
+        SFLog(@"%@", [rightbuyItem.GoodsList[0] GoodsId]);
+//        [json writeToFile:@"/Users/mac/Desktop/json.plist" atomically:YES];
+        
+        SFRightBuyViewController *rightBuy = [[SFRightBuyViewController alloc] init];
+        rightBuy.rightBuyItem = rightbuyItem;
+        [self.navigationController pushViewController:rightBuy animated:YES];
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
-//- (NSDictionary *)params {
-//
-//    
-//}
+- (NSDictionary *)params {
+
+    NSString * buyCarData;
+    NSMutableArray *buyCarDataArray = [NSMutableArray arrayWithCapacity:0];
+    for (SFBuyShopItem *shopItem in _goodListArray) {
+        buyCarData = [NSString stringWithFormat:@"%li,%@,%lf",shopItem.GoodsCount, shopItem.GoodsId, shopItem.Weight];
+        [buyCarDataArray addObject:buyCarData];
+    }
+    buyCarData = [buyCarDataArray componentsJoinedByString:@"#"];
+    
+    return @{@"Goods":buyCarData};
+
+}
 @end

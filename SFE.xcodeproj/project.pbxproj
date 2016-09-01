@@ -16,6 +16,8 @@
 		0411D57D1D7725AB0052A5D7 /* SFRightBuyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D57C1D7725AB0052A5D7 /* SFRightBuyItem.m */; };
 		0411D5801D7725C80052A5D7 /* SFGoodsListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D57F1D7725C80052A5D7 /* SFGoodsListItem.m */; };
 		0411D5831D7725DD0052A5D7 /* SFPayListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5821D7725DD0052A5D7 /* SFPayListItem.m */; };
+		0411D5861D77BE740052A5D7 /* SFRightTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5851D77BE740052A5D7 /* SFRightTableView.m */; };
+		0411D5891D77C3280052A5D7 /* SFRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411D5881D77C3280052A5D7 /* SFRightTableViewCell.m */; };
 		04A862951D697E34003D66C3 /* SFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862941D697E34003D66C3 /* SFLoginViewController.m */; };
 		04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A862971D697F38003D66C3 /* SFLoginInputView.m */; };
 		04A8629B1D69A261003D66C3 /* SFLoginThirdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8629A1D69A261003D66C3 /* SFLoginThirdView.m */; };
@@ -86,6 +88,10 @@
 		0411D57F1D7725C80052A5D7 /* SFGoodsListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFGoodsListItem.m; sourceTree = "<group>"; };
 		0411D5811D7725DD0052A5D7 /* SFPayListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPayListItem.h; sourceTree = "<group>"; };
 		0411D5821D7725DD0052A5D7 /* SFPayListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFPayListItem.m; sourceTree = "<group>"; };
+		0411D5841D77BE740052A5D7 /* SFRightTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRightTableView.h; sourceTree = "<group>"; };
+		0411D5851D77BE740052A5D7 /* SFRightTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRightTableView.m; sourceTree = "<group>"; };
+		0411D5871D77C3280052A5D7 /* SFRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFRightTableViewCell.h; sourceTree = "<group>"; };
+		0411D5881D77C3280052A5D7 /* SFRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRightTableViewCell.m; sourceTree = "<group>"; };
 		04A862931D697E34003D66C3 /* SFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginViewController.h; sourceTree = "<group>"; };
 		04A862941D697E34003D66C3 /* SFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoginViewController.m; sourceTree = "<group>"; };
 		04A862961D697F38003D66C3 /* SFLoginInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoginInputView.h; sourceTree = "<group>"; };
@@ -235,6 +241,10 @@
 			children = (
 				0411D5751D7725590052A5D7 /* SFAddressView.h */,
 				0411D5761D7725590052A5D7 /* SFAddressView.m */,
+				0411D5841D77BE740052A5D7 /* SFRightTableView.h */,
+				0411D5851D77BE740052A5D7 /* SFRightTableView.m */,
+				0411D5871D77C3280052A5D7 /* SFRightTableViewCell.h */,
+				0411D5881D77C3280052A5D7 /* SFRightTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -897,6 +907,7 @@
 				04E738891D65B8EB007B44A8 /* SFMyHeaderView.m in Sources */,
 				04CA49D81D645907004C2D7B /* SFClassViewController.m in Sources */,
 				04A862B01D6C091C003D66C3 /* SFBrandDealCell.m in Sources */,
+				0411D5891D77C3280052A5D7 /* SFRightTableViewCell.m in Sources */,
 				04DE56F41D6EB009003F44F1 /* SFGoodListNavButton.m in Sources */,
 				04A862A41D6B3A8C003D66C3 /* SFDealTableView.m in Sources */,
 				04A862981D697F38003D66C3 /* SFLoginInputView.m in Sources */,
@@ -933,6 +944,7 @@
 				04E7388F1D65DB8B007B44A8 /* SFInputView.m in Sources */,
 				04DE56E71D6E992A003F44F1 /* SFSearchViewController.m in Sources */,
 				04DE56EE1D6EA34F003F44F1 /* SFGoodsListViewController.m in Sources */,
+				0411D5861D77BE740052A5D7 /* SFRightTableView.m in Sources */,
 				0411D5771D7725590052A5D7 /* SFAddressView.m in Sources */,
 				04E7389D1D6750AD007B44A8 /* SFHttpTools.m in Sources */,
 				04D2A7131D6D9DD600AFA977 /* SFDetailListItem.m in Sources */,

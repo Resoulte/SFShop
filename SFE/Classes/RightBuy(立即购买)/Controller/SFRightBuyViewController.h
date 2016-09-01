@@ -7,7 +7,11 @@
 //
 
 #import "SFBaseViewController.h"
+#import "SFRightBuyItem.h"
 
 @interface SFRightBuyViewController : SFBaseViewController
+
+/**订单模型*/
+@property (strong, nonatomic) SFRightBuyItem *rightBuyItem;
 
 @end
